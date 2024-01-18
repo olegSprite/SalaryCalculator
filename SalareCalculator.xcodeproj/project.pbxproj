@@ -13,6 +13,9 @@
 		D57FD1902B59C0E600C710F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57FD18E2B59C0E600C710F5 /* Main.storyboard */; };
 		D57FD1922B59C0E800C710F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1912B59C0E800C710F5 /* Assets.xcassets */; };
 		D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */; };
+		D57FD19D2B59D1B900C710F5 /* Tochka Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD19C2B59D1B900C710F5 /* Tochka Script.ttf */; };
+		D57FD1A02B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD19E2B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf */; };
+		D57FD1A12B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD19F2B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D57FD1912B59C0E800C710F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D57FD1942B59C0E800C710F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D57FD1962B59C0E800C710F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57FD19C2B59D1B900C710F5 /* Tochka Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tochka Script.ttf"; path = "../../../../Downloads/Шрифты/Tochka Script/Tochka Script.ttf"; sourceTree = "<group>"; };
+		D57FD19E2B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Norms Tochka Extended Bold.otf"; path = "../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT Norms Tochka Extended Bold.otf"; sourceTree = "<group>"; };
+		D57FD19F2B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Norms Tochka Extended Regular.otf"; path = "../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT Norms Tochka Extended Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				D57FD1912B59C0E800C710F5 /* Assets.xcassets */,
 				D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */,
 				D57FD1962B59C0E800C710F5 /* Info.plist */,
+				D57FD19C2B59D1B900C710F5 /* Tochka Script.ttf */,
+				D57FD19E2B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf */,
+				D57FD19F2B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf */,
 			);
 			path = SalareCalculator;
 			sourceTree = "<group>";
@@ -125,9 +134,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57FD1A02B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf in Resources */,
+				D57FD19D2B59D1B900C710F5 /* Tochka Script.ttf in Resources */,
 				D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */,
 				D57FD1922B59C0E800C710F5 /* Assets.xcassets in Resources */,
 				D57FD1902B59C0E600C710F5 /* Main.storyboard in Resources */,
+				D57FD1A12B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
