@@ -31,6 +31,24 @@ extension CounterViewController: UIPickerViewDataSource {
 
 extension CounterViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return nil // Нужно как то возвращать ассоциативные значения из перечисления месяцев
+        let mounth: [Mounth] = [
+            .january,
+            .february,
+            .march,
+            .april,
+            .may,
+            .june,
+            .july,
+            .august,
+            .september,
+            .october,
+            .november,
+            .december
+        ]
+        
+        for result in mounth {
+            return result.rawValue
+        }
+        return nil
     }
 }

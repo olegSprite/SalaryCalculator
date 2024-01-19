@@ -67,7 +67,7 @@
         <!--Counter View Controller-->
         <scene sceneID="fFy-zR-RQy">
             <objects>
-                <viewController id="6DU-52-co2" customClass="CounterViewController" customModule="SalareCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6DU-52-co2" customClass="CounterViewController" customModule="SalaryCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugq-E7-BBM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
         <!--Текущий месяц-->
         <scene sceneID="QH6-if-INT">
             <objects>
-                <viewController id="EQz-I4-nl4" customClass="CurentMounthViewController" customModule="SalareCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EQz-I4-nl4" customClass="CurentMounthViewController" customModule="SalaryCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1SR-VL-CvG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
