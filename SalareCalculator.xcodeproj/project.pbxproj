@@ -13,15 +13,12 @@
 		D57FD1902B59C0E600C710F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57FD18E2B59C0E600C710F5 /* Main.storyboard */; };
 		D57FD1922B59C0E800C710F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1912B59C0E800C710F5 /* Assets.xcassets */; };
 		D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */; };
-		D57FD19D2B59D1B900C710F5 /* Tochka Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD19C2B59D1B900C710F5 /* Tochka Script.ttf */; };
-		D57FD1A02B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD19E2B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf */; };
-		D57FD1A12B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD19F2B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf */; };
 		D57FD1A32B5A678400C710F5 /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A22B5A678400C710F5 /* SalaryModel.swift */; };
 		D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D57FD1852B59C0E600C710F5 /* SalaryCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalaryCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57FD1852B59C0E600C710F5 /* SalareCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalareCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57FD1882B59C0E600C710F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurentMounthViewController.swift; sourceTree = "<group>"; };
@@ -29,11 +26,11 @@
 		D57FD1912B59C0E800C710F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D57FD1942B59C0E800C710F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D57FD1962B59C0E800C710F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D57FD19C2B59D1B900C710F5 /* Tochka Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tochka Script.ttf"; path = "../../../../Downloads/Шрифты/Tochka Script/Tochka Script.ttf"; sourceTree = "<group>"; };
-		D57FD19E2B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Norms Tochka Extended Bold.otf"; path = "../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT Norms Tochka Extended Bold.otf"; sourceTree = "<group>"; };
-		D57FD19F2B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Norms Tochka Extended Regular.otf"; path = "../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT Norms Tochka Extended Regular.otf"; sourceTree = "<group>"; };
 		D57FD1A22B5A678400C710F5 /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 		D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		D57FD1A82B5ABE9200C710F5 /* TT Norms Tochka Extended Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Norms Tochka Extended Regular.otf"; path = "../../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT Norms Tochka Extended Regular.otf"; sourceTree = "<group>"; };
+		D57FD1A92B5ABE9400C710F5 /* TT Norms Tochka Extended Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Norms Tochka Extended Bold.otf"; sourceTree = "<group>"; };
+		D57FD1AA2B5ABEB500C710F5 /* Tochka Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tochka Script.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +47,7 @@
 		D57FD17C2B59C0E600C710F5 = {
 			isa = PBXGroup;
 			children = (
-				D57FD1872B59C0E600C710F5 /* SalaryCalculator */,
+				D57FD1872B59C0E600C710F5 /* SalareCalculator */,
 				D57FD1862B59C0E600C710F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +55,12 @@
 		D57FD1862B59C0E600C710F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D57FD1852B59C0E600C710F5 /* SalaryCalculator.app */,
+				D57FD1852B59C0E600C710F5 /* SalareCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D57FD1872B59C0E600C710F5 /* SalaryCalculator */ = {
+		D57FD1872B59C0E600C710F5 /* SalareCalculator */ = {
 			isa = PBXGroup;
 			children = (
 				D57FD1882B59C0E600C710F5 /* AppDelegate.swift */,
@@ -75,19 +72,27 @@
 				D57FD1912B59C0E800C710F5 /* Assets.xcassets */,
 				D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */,
 				D57FD1962B59C0E800C710F5 /* Info.plist */,
-				D57FD19C2B59D1B900C710F5 /* Tochka Script.ttf */,
-				D57FD19E2B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf */,
-				D57FD19F2B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf */,
+				D57FD1A62B5ABE8500C710F5 /* Font */,
 			);
-			path = SalaryCalculator;
+			path = SalareCalculator;
+			sourceTree = "<group>";
+		};
+		D57FD1A62B5ABE8500C710F5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D57FD1AA2B5ABEB500C710F5 /* Tochka Script.ttf */,
+				D57FD1A92B5ABE9400C710F5 /* TT Norms Tochka Extended Bold.otf */,
+				D57FD1A82B5ABE9200C710F5 /* TT Norms Tochka Extended Regular.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D57FD1842B59C0E600C710F5 /* SalaryCalculator */ = {
+		D57FD1842B59C0E600C710F5 /* SalareCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D57FD1992B59C0E800C710F5 /* Build configuration list for PBXNativeTarget "SalaryCalculator" */;
+			buildConfigurationList = D57FD1992B59C0E800C710F5 /* Build configuration list for PBXNativeTarget "SalareCalculator" */;
 			buildPhases = (
 				D57FD1812B59C0E600C710F5 /* Sources */,
 				D57FD1822B59C0E600C710F5 /* Frameworks */,
@@ -97,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = SalaryCalculator;
+			name = SalareCalculator;
 			productName = SalareCalculator;
-			productReference = D57FD1852B59C0E600C710F5 /* SalaryCalculator.app */;
+			productReference = D57FD1852B59C0E600C710F5 /* SalareCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D57FD1802B59C0E600C710F5 /* Build configuration list for PBXProject "SalaryCalculator" */;
+			buildConfigurationList = D57FD1802B59C0E600C710F5 /* Build configuration list for PBXProject "SalareCalculator" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D57FD1842B59C0E600C710F5 /* SalaryCalculator */,
+				D57FD1842B59C0E600C710F5 /* SalareCalculator */,
 			);
 		};
 /* End PBXProject section */
@@ -140,12 +145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D57FD1A02B59D25400C710F5 /* TT Norms Tochka Extended Bold.otf in Resources */,
-				D57FD19D2B59D1B900C710F5 /* Tochka Script.ttf in Resources */,
 				D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */,
 				D57FD1922B59C0E800C710F5 /* Assets.xcassets in Resources */,
 				D57FD1902B59C0E600C710F5 /* Main.storyboard in Resources */,
-				D57FD1A12B59D25400C710F5 /* TT Norms Tochka Extended Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +366,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D57FD1802B59C0E600C710F5 /* Build configuration list for PBXProject "SalaryCalculator" */ = {
+		D57FD1802B59C0E600C710F5 /* Build configuration list for PBXProject "SalareCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D57FD1972B59C0E800C710F5 /* Debug */,
@@ -373,7 +375,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D57FD1992B59C0E800C710F5 /* Build configuration list for PBXNativeTarget "SalaryCalculator" */ = {
+		D57FD1992B59C0E800C710F5 /* Build configuration list for PBXNativeTarget "SalareCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D57FD19A2B59C0E800C710F5 /* Debug */,
