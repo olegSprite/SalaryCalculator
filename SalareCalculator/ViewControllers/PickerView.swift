@@ -1,37 +1,12 @@
 //
-//  CounterViewController.swift
+//  PickerView.swift
 //  SalareCalculator
 //
-//  Created by Олег Спиридонов on 19.01.2024.
+//  Created by Олег Спиридонов on 21.01.2024.
 //
 
 import Foundation
 import UIKit
-
-class CounterViewController: UIViewController {
-    
-    @IBOutlet weak private var mounthPicker: UIPickerView!
- 
-    private var curentMounth: Mounth?
-    private let mounth: [Mounth] = [
-        .january,
-        .february,
-        .march,
-        .april,
-        .may,
-        .june,
-        .july,
-        .august,
-        .september,
-        .october,
-        .november,
-        .december
-    ]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        }
-}
 
 // MARK: - PickerViewDataSource
 
@@ -57,28 +32,40 @@ extension CounterViewController: UIPickerViewDelegate {
         switch row {
         case 0:
             curentMounth = .january
+            enabledCelebration()
         case 1:
             curentMounth = .february
+            enabledCelebration()
         case 2:
             curentMounth = .march
+            enabledCelebration()
         case 3:
             curentMounth = .april
+            hideCelebration()
         case 4:
             curentMounth = .may
+            enabledCelebration()
         case 5:
             curentMounth = .june
+            enabledCelebration()
         case 6:
             curentMounth = .july
+            hideCelebration()
         case 7:
             curentMounth = .august
+            hideCelebration()
         case 8:
             curentMounth = .september
+            hideCelebration()
         case 9:
             curentMounth = .october
+            hideCelebration()
         case 10:
             curentMounth = .november
+            enabledCelebration()
         case 11:
             curentMounth = .december
+            hideCelebration()
         default:
             return
         }

@@ -7,16 +7,17 @@
 
 import Foundation
 
-struct SalaryModel {
-    var hoursMounth: Int
-    var hoursHalf: Int
-    var nightHourseMounth: Int
-    var nightHourseHalf: Int
-    var selebrationHourse: Int
-    var allSalary: Int
-    var firstHalfSalary: Int
-    var secondHalfSalary: Int
-    var mounth: Mounth
+struct SalaryModel: Encodable, Decodable {
+    var hoursMounth: String
+    var hoursHalf: String
+    var nightHourseMounth: String
+    var nightHourseHalf: String
+    var selebrationHourse: String
+    var nightSelebrationHourse: String
+    var allSalary: String
+    var firstHalfSalary: String
+    var secondHalfSalary: String
+    var mounth: String
 }
 
 enum Mounth: String {

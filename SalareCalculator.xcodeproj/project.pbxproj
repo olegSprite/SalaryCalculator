@@ -10,6 +10,7 @@
 		D575664C2B5BB80200ABBDCA /* Tochka_Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */; };
 		D575664D2B5BB80500ABBDCA /* TT_Norms_Tochka_Extended_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */; };
 		D575664E2B5BB80700ABBDCA /* TT_Norms_Tochka_Extended_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */; };
+		D57566502B5C561D00ABBDCA /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575664F2B5C561D00ABBDCA /* PickerView.swift */; };
 		D57FD1892B59C0E600C710F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1882B59C0E600C710F5 /* AppDelegate.swift */; };
 		D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */; };
 		D57FD18D2B59C0E600C710F5 /* CurentMounthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D575664F2B5C561D00ABBDCA /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		D57FD1852B59C0E600C710F5 /* SalareCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalareCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57FD1882B59C0E600C710F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D57566512B5C56DF00ABBDCA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D575664F2B5C561D00ABBDCA /* PickerView.swift */,
+				D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */,
+				D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D57566522B5C570500ABBDCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D57FD1A22B5A678400C710F5 /* SalaryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D57FD17C2B59C0E600C710F5 = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +86,10 @@
 		D57FD1872B59C0E600C710F5 /* SalareCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				D57566522B5C570500ABBDCA /* Models */,
+				D57566512B5C56DF00ABBDCA /* ViewControllers */,
 				D57FD1882B59C0E600C710F5 /* AppDelegate.swift */,
 				D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */,
-				D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */,
-				D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */,
-				D57FD1A22B5A678400C710F5 /* SalaryModel.swift */,
 				D57FD18E2B59C0E600C710F5 /* Main.storyboard */,
 				D57FD1912B59C0E800C710F5 /* Assets.xcassets */,
 				D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */,
@@ -166,6 +185,7 @@
 			files = (
 				D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */,
 				D57FD18D2B59C0E600C710F5 /* CurentMounthViewController.swift in Sources */,
+				D57566502B5C561D00ABBDCA /* PickerView.swift in Sources */,
 				D57FD1A32B5A678400C710F5 /* SalaryModel.swift in Sources */,
 				D57FD1892B59C0E600C710F5 /* AppDelegate.swift in Sources */,
 				D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */,
