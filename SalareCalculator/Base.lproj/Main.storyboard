@@ -9,18 +9,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="TT Norms Tochka Extended Bold.otf">
+        <array key="TT_Norms_Tochka_Extended_Bold.otf">
             <string>TTNormsTochkaExt-Bold</string>
         </array>
-        <array key="TT Norms Tochka Extended Regular.otf">
+        <array key="TT_Norms_Tochka_Extended_Regular.otf">
             <string>TTNormsTochkaExt-Regular</string>
         </array>
-        <array key="Tochka Script.ttf">
+        <array key="Tochka_Script.ttf">
             <string>TochkaScript-Normal</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Item 2-->
+        <!--Доходы-->
         <scene sceneID="ZIt-1y-ptO">
             <objects>
                 <viewController id="GWe-sb-txb" sceneMemberID="viewController">
@@ -29,36 +29,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доходы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edK-0G-nSA">
-                                <rect key="frame" x="16" y="64" width="220" height="48"/>
+                                <rect key="frame" x="16" y="64" width="101" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="rLa-cg-V1i"/>
-                                    <constraint firstAttribute="width" constant="220" id="tPN-eX-dpF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тут будут отображаться все месяцы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDu-HZ-3EB">
-                                <rect key="frame" x="62" y="420" width="290" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страница в разработке" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDu-HZ-3EB">
+                                <rect key="frame" x="108" y="438" width="199.5" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="iir-yv-eCN"/>
                                     <constraint firstAttribute="height" constant="21" id="wvI-tB-OBW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="97L-iJ-MF9">
+                                <rect key="frame" x="87" y="301.5" width="240" height="128.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="iVs-vi-8hV"/>
+                                    <constraint firstAttribute="width" constant="240" id="kDy-WT-MwT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EcL-Kd-5le"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="centerY" secondItem="EcL-Kd-5le" secondAttribute="centerY" id="eFB-kz-UA4"/>
-                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="centerX" secondItem="EcL-Kd-5le" secondAttribute="centerX" id="mpB-GP-9Ek"/>
+                            <constraint firstItem="97L-iJ-MF9" firstAttribute="leading" secondItem="EcL-Kd-5le" secondAttribute="leading" constant="87" id="874-FI-YBI"/>
+                            <constraint firstItem="97L-iJ-MF9" firstAttribute="centerX" secondItem="Qzw-8P-Uq0" secondAttribute="centerX" id="Avj-Lb-DGC"/>
+                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="centerY" secondItem="EcL-Kd-5le" secondAttribute="centerY" constant="18" id="eFB-kz-UA4"/>
+                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="centerX" secondItem="EcL-Kd-5le" secondAttribute="centerX" constant="0.75" id="mpB-GP-9Ek"/>
+                            <constraint firstItem="EcL-Kd-5le" firstAttribute="trailing" secondItem="97L-iJ-MF9" secondAttribute="trailing" constant="87" id="now-PB-kd0"/>
+                            <constraint firstItem="EcL-Kd-5le" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="edK-0G-nSA" secondAttribute="trailing" symbolic="YES" id="qad-G9-JfD"/>
+                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="top" secondItem="97L-iJ-MF9" secondAttribute="bottom" constant="8" symbolic="YES" id="sMG-zn-voH"/>
                             <constraint firstItem="edK-0G-nSA" firstAttribute="leading" secondItem="EcL-Kd-5le" secondAttribute="leading" constant="16" id="vee-QZ-4n4"/>
                             <constraint firstItem="edK-0G-nSA" firstAttribute="top" secondItem="EcL-Kd-5le" secondAttribute="top" constant="16" id="y03-hn-fUO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="iS4-kW-Mlu"/>
+                    <tabBarItem key="tabBarItem" title="Доходы" image="books.vertical.fill" catalog="system" id="iS4-kW-Mlu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BpS-DE-SPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,177 +82,315 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Новая зарплата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kL-5Q-HIp">
-                                <rect key="frame" x="16" y="16" width="382" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новая зарплата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kL-5Q-HIp">
+                                <rect key="frame" x="16" y="16" width="382" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tad-CG-xR3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Месяц:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfc-7l-Adl">
-                                <rect key="frame" x="16" y="55" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Месяц:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfc-7l-Adl">
+                                <rect key="frame" x="16" y="54" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="8vc-ic-6Is"/>
+                                    <constraint firstAttribute="height" constant="25" id="HNU-fQ-20d"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Часы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-df-5HU">
-                                <rect key="frame" x="16" y="196" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Часы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-df-5HU">
+                                <rect key="frame" x="16" y="195" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="91L-95-gQc"/>
+                                    <constraint firstAttribute="height" constant="25" id="jTF-h0-IeQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyz-0Z-DYX">
-                                <rect key="frame" x="155" y="196" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyz-0Z-DYX">
+                                <rect key="frame" x="140" y="195" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0RC-ng-QFv"/>
+                                    <constraint firstAttribute="width" constant="66" id="Flu-5Q-la4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="До 16-го" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ms-KX-8aE">
-                                <rect key="frame" x="267" y="196" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До 16-го" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ms-KX-8aE">
+                                <rect key="frame" x="264" y="195" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="9AQ-8R-XQU"/>
+                                    <constraint firstAttribute="width" constant="66" id="lgN-aE-T2c"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ночные часы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeV-io-hQD">
-                                <rect key="frame" x="16" y="297" width="141" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ночные часы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeV-io-hQD">
+                                <rect key="frame" x="16" y="296" width="141" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="iDj-dF-vjR"/>
+                                    <constraint firstAttribute="height" constant="25" id="w5m-wq-CGJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5I-ff-Wbu">
-                                <rect key="frame" x="140" y="299" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5I-ff-Wbu">
+                                <rect key="frame" x="140" y="296" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="1R8-zc-cN2"/>
+                                    <constraint firstAttribute="height" constant="25" id="CYW-rY-hCs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AH6-li-OOE">
-                                <rect key="frame" x="140" y="332" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AH6-li-OOE">
+                                <rect key="frame" x="140" y="329" width="97" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="L2e-j1-krv"/>
+                                    <constraint firstAttribute="height" constant="34" id="XYO-nz-Z4l"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myU-rs-Zs8">
-                                <rect key="frame" x="280" y="325" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myU-rs-Zs8">
+                                <rect key="frame" x="264" y="329" width="97" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="TsL-fE-8Kc"/>
+                                    <constraint firstAttribute="width" constant="97" id="Vlw-Hw-1yy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="В праздники:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-FW-IqC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В праздники:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-FW-IqC">
                                 <rect key="frame" x="16" y="394" width="141" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="MgN-AS-YtY"/>
+                                    <constraint firstAttribute="width" constant="141" id="XSG-zm-DCs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-8i-6cP">
-                                <rect key="frame" x="265" y="394" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-8i-6cP">
+                                <rect key="frame" x="140" y="427" width="97" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="K9s-va-Gxj"/>
+                                    <constraint firstAttribute="width" constant="97" id="iSp-bt-FA3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Твоя зарплата считается по ставке 220 руб./час" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGE-p7-Z7s">
-                                <rect key="frame" x="65" y="493" width="285" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Твоя зарплата считается по ставке 220 руб./час" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGE-p7-Z7s">
+                                <rect key="frame" x="0.0" y="493" width="414" height="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Итого:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ync-Ir-aqg">
-                                <rect key="frame" x="16" y="603" width="223" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ync-Ir-aqg">
+                                <rect key="frame" x="16" y="540" width="223" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="04F-ov-WGg"/>
+                                    <constraint firstAttribute="height" constant="20" id="VXr-oV-53f"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-ze-5AW">
-                                <rect key="frame" x="16" y="655" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-ze-5AW">
+                                <rect key="frame" x="16" y="576" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="GeB-ja-k5b"/>
+                                    <constraint firstAttribute="height" constant="30" id="tYl-mC-v1M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 100 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrK-zx-Ld2">
-                                <rect key="frame" x="267" y="589" width="138.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100 000₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrK-zx-Ld2">
+                                <rect key="frame" x="179" y="576" width="219" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="339-av-4T5"/>
+                                    <constraint firstAttribute="width" constant="219" id="Qq4-YL-VGj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="28"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Аванс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-6J-AhU">
-                                <rect key="frame" x="16" y="719" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аванс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-6J-AhU">
+                                <rect key="frame" x="16" y="622" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="m2d-rA-mXh"/>
+                                    <constraint firstAttribute="height" constant="30" id="n7W-9v-yas"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Расчёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-RY-q2n">
-                                <rect key="frame" x="16" y="781" width="85" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расчёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-RY-q2n">
+                                <rect key="frame" x="16" y="668" width="85" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="GKB-F0-sia"/>
+                                    <constraint firstAttribute="width" constant="85" id="hDm-Ul-ePd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="+ 50 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98r-We-Wqh">
-                                <rect key="frame" x="267" y="647" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 50 000₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEl-dj-qBY">
+                                <rect key="frame" x="179" y="663" width="219" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jyw-Zj-Wtn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 50 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEl-dj-qBY">
-                                <rect key="frame" x="267" y="685" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" systemColor="systemGreenColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="До 16-го" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXs-VP-G0W">
-                                <rect key="frame" x="267" y="292" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До 16-го" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXs-VP-G0W">
+                                <rect key="frame" x="264" y="296" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hbW-AC-zEX"/>
+                                    <constraint firstAttribute="width" constant="66" id="rI0-cV-GKy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cp-pM-tdR">
-                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cp-pM-tdR">
+                                <rect key="frame" x="0.0" y="79" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="iE5-Ei-tgO"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="6DU-52-co2" id="CbJ-p5-tYg"/>
+                                    <outlet property="delegate" destination="6DU-52-co2" id="dim-Gm-pNR"/>
+                                </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pr-dF-GDu">
-                                <rect key="frame" x="95" y="229" width="80" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pr-dF-GDu">
+                                <rect key="frame" x="140" y="228" width="97" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="8Af-YN-sK8"/>
+                                    <constraint firstAttribute="height" constant="36" id="tA3-Pk-zUP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-cv-hvj">
-                                <rect key="frame" x="267" y="229" width="80" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-cv-hvj">
+                                <rect key="frame" x="264" y="228" width="95" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="F3i-q8-bVr"/>
+                                    <constraint firstAttribute="width" constant="95" id="SGa-JP-fYY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VV-Q0-d6t">
-                                <rect key="frame" x="148" y="394" width="66" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VV-Q0-d6t">
+                                <rect key="frame" x="140" y="395" width="66" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="GEW-q0-UWI"/>
+                                    <constraint firstAttribute="height" constant="25" id="MVj-Pj-LHC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+ 50 000₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98r-We-Wqh">
+                                <rect key="frame" x="179" y="622" width="219" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y0a-di-gGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="25"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zH-iV-vXV">
+                                <rect key="frame" x="288" y="49" width="110" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="LnY-Vl-1FK"/>
+                                    <constraint firstAttribute="width" constant="110" id="yC8-42-oOd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="71z-E2-68X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Icl-8i-6cP" firstAttribute="leading" secondItem="6VV-Q0-d6t" secondAttribute="leading" id="117-6u-puq"/>
+                            <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="OrK-zx-Ld2" secondAttribute="trailing" constant="16" id="1Id-CK-5Nz"/>
+                            <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="0kL-5Q-HIp" secondAttribute="trailing" constant="16" id="1Q2-L4-eDx"/>
+                            <constraint firstItem="EQL-ze-5AW" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="1to-nY-m4v"/>
+                            <constraint firstItem="ync-Ir-aqg" firstAttribute="top" secondItem="PGE-p7-Z7s" secondAttribute="bottom" constant="32" id="2EI-BS-Dl4"/>
+                            <constraint firstItem="ad1-df-5HU" firstAttribute="top" secondItem="3cp-pM-tdR" secondAttribute="bottom" constant="16" id="3dA-hG-OUe"/>
+                            <constraint firstItem="Icl-8i-6cP" firstAttribute="top" secondItem="PYo-FW-IqC" secondAttribute="bottom" constant="8" id="3lt-ug-wXC"/>
+                            <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="98r-We-Wqh" secondAttribute="trailing" constant="16" id="4Cm-Lc-P4X"/>
+                            <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="5zH-iV-vXV" secondAttribute="trailing" constant="16" id="4MO-5N-kQw"/>
+                            <constraint firstItem="uXs-VP-G0W" firstAttribute="top" secondItem="k6d-cv-hvj" secondAttribute="bottom" constant="32" id="4cV-xz-lo9"/>
+                            <constraint firstItem="PYo-FW-IqC" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="AZ9-e9-zGH"/>
+                            <constraint firstItem="98r-We-Wqh" firstAttribute="centerY" secondItem="CRP-6J-AhU" secondAttribute="centerY" id="Asd-7h-170"/>
+                            <constraint firstItem="4pr-dF-GDu" firstAttribute="leading" secondItem="kyz-0Z-DYX" secondAttribute="leading" id="C4p-Ax-2bC"/>
+                            <constraint firstItem="myU-rs-Zs8" firstAttribute="leading" secondItem="uXs-VP-G0W" secondAttribute="leading" id="D0G-qH-uej"/>
+                            <constraint firstItem="HEl-dj-qBY" firstAttribute="centerY" secondItem="Fib-RY-q2n" secondAttribute="centerY" id="F5V-YR-x0h"/>
+                            <constraint firstItem="0kL-5Q-HIp" firstAttribute="top" secondItem="71z-E2-68X" secondAttribute="top" constant="16" id="FjA-eS-v5t"/>
+                            <constraint firstItem="PGE-p7-Z7s" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" id="Fpa-QE-hnd"/>
+                            <constraint firstItem="AH6-li-OOE" firstAttribute="leading" secondItem="x5I-ff-Wbu" secondAttribute="leading" id="G26-Wg-68S"/>
+                            <constraint firstItem="kyz-0Z-DYX" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="trailing" constant="58" id="I2h-fP-fJY"/>
+                            <constraint firstItem="HEl-dj-qBY" firstAttribute="leading" secondItem="OrK-zx-Ld2" secondAttribute="leading" id="J3o-Fa-f5A"/>
+                            <constraint firstItem="6VV-Q0-d6t" firstAttribute="top" secondItem="AH6-li-OOE" secondAttribute="bottom" constant="32" id="LLU-cw-xRc"/>
+                            <constraint firstItem="ad1-df-5HU" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" constant="16" id="LiL-OH-sSL"/>
+                            <constraint firstItem="CRP-6J-AhU" firstAttribute="top" secondItem="EQL-ze-5AW" secondAttribute="bottom" constant="16" id="Ngg-yg-b5d"/>
+                            <constraint firstItem="uXs-VP-G0W" firstAttribute="leading" secondItem="8ms-KX-8aE" secondAttribute="leading" id="QoT-TA-SaB"/>
+                            <constraint firstItem="4pr-dF-GDu" firstAttribute="top" secondItem="kyz-0Z-DYX" secondAttribute="bottom" constant="8" id="RBu-dh-1Nx"/>
+                            <constraint firstItem="AH6-li-OOE" firstAttribute="top" secondItem="SeV-io-hQD" secondAttribute="bottom" constant="8" id="Rl4-Od-7Wp"/>
+                            <constraint firstItem="myU-rs-Zs8" firstAttribute="top" secondItem="uXs-VP-G0W" secondAttribute="bottom" constant="8" id="Tb9-9J-73U"/>
+                            <constraint firstItem="Fib-RY-q2n" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="U0d-HJ-kJF"/>
+                            <constraint firstItem="x5I-ff-Wbu" firstAttribute="top" secondItem="4pr-dF-GDu" secondAttribute="bottom" constant="32" id="UbO-hc-4qk"/>
+                            <constraint firstItem="EQL-ze-5AW" firstAttribute="top" secondItem="ync-Ir-aqg" secondAttribute="bottom" constant="16" id="VaQ-XP-C2Z"/>
+                            <constraint firstItem="SeV-io-hQD" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="WjT-Wx-GGT"/>
+                            <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="PGE-p7-Z7s" secondAttribute="trailing" id="Yzx-Ta-FVJ"/>
+                            <constraint firstItem="kyz-0Z-DYX" firstAttribute="top" secondItem="3cp-pM-tdR" secondAttribute="bottom" constant="16" id="ZMM-sa-2SX"/>
+                            <constraint firstItem="8ms-KX-8aE" firstAttribute="top" secondItem="3cp-pM-tdR" secondAttribute="bottom" constant="16" id="b4v-Y5-ycl"/>
+                            <constraint firstItem="OrK-zx-Ld2" firstAttribute="centerY" secondItem="EQL-ze-5AW" secondAttribute="centerY" id="c7u-Jv-Da3"/>
+                            <constraint firstItem="k6d-cv-hvj" firstAttribute="leading" secondItem="8ms-KX-8aE" secondAttribute="leading" id="cli-cF-YRV"/>
+                            <constraint firstItem="k6d-cv-hvj" firstAttribute="top" secondItem="8ms-KX-8aE" secondAttribute="bottom" constant="8" id="cnh-Ia-jIE"/>
+                            <constraint firstItem="x5I-ff-Wbu" firstAttribute="leading" secondItem="kyz-0Z-DYX" secondAttribute="leading" id="ecs-vx-V89"/>
+                            <constraint firstItem="PGE-p7-Z7s" firstAttribute="top" secondItem="Icl-8i-6cP" secondAttribute="bottom" constant="32" id="etB-cL-fPu"/>
+                            <constraint firstItem="pfc-7l-Adl" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" constant="16" id="fae-Eq-iTa"/>
+                            <constraint firstItem="PGE-p7-Z7s" firstAttribute="centerX" secondItem="71z-E2-68X" secondAttribute="centerX" id="hoT-ol-shW"/>
+                            <constraint firstItem="3cp-pM-tdR" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" id="imK-zK-dkv"/>
+                            <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="HEl-dj-qBY" secondAttribute="trailing" constant="16" id="kjA-rP-o05"/>
+                            <constraint firstItem="6VV-Q0-d6t" firstAttribute="leading" secondItem="kyz-0Z-DYX" secondAttribute="leading" id="m7t-AM-j8C"/>
+                            <constraint firstItem="0kL-5Q-HIp" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" constant="16" id="mQd-8b-LxP"/>
+                            <constraint firstItem="pfc-7l-Adl" firstAttribute="top" secondItem="0kL-5Q-HIp" secondAttribute="bottom" constant="8" id="mpt-hr-9RK"/>
+                            <constraint firstItem="Fib-RY-q2n" firstAttribute="top" secondItem="CRP-6J-AhU" secondAttribute="bottom" constant="16" id="pIR-kW-RpQ"/>
+                            <constraint firstItem="3cp-pM-tdR" firstAttribute="top" secondItem="pfc-7l-Adl" secondAttribute="bottom" id="qC1-al-8L0"/>
+                            <constraint firstItem="ync-Ir-aqg" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="sop-DT-xFY"/>
+                            <constraint firstItem="5zH-iV-vXV" firstAttribute="centerY" secondItem="pfc-7l-Adl" secondAttribute="centerY" id="tEL-EI-rmh"/>
+                            <constraint firstItem="98r-We-Wqh" firstAttribute="leading" secondItem="OrK-zx-Ld2" secondAttribute="leading" id="twz-7t-Ie9"/>
+                            <constraint firstItem="CRP-6J-AhU" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="txN-v5-J8e"/>
+                            <constraint firstItem="PYo-FW-IqC" firstAttribute="top" secondItem="AH6-li-OOE" secondAttribute="bottom" constant="31" id="vLe-KG-S01"/>
+                            <constraint firstItem="SeV-io-hQD" firstAttribute="top" secondItem="4pr-dF-GDu" secondAttribute="bottom" constant="32" id="xmS-p8-J2V"/>
+                            <constraint firstItem="8ms-KX-8aE" firstAttribute="leading" secondItem="kyz-0Z-DYX" secondAttribute="trailing" constant="58" id="xtA-V7-d64"/>
+                            <constraint firstItem="3cp-pM-tdR" firstAttribute="trailing" secondItem="71z-E2-68X" secondAttribute="trailing" id="yIe-eo-ORM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dud-dt-sTU">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="jpF-NH-0Cd"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mounthPicker" destination="3cp-pM-tdR" id="hnb-tO-yDl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufq-fG-Mrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.44927536231884" y="-622.09821428571422"/>
+            <point key="canvasLocation" x="64" y="-241"/>
         </scene>
         <!--Текущий месяц-->
         <scene sceneID="QH6-if-INT">
@@ -267,7 +415,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Профиль"/>
                                 <connections>
-                                    <segue destination="9fP-iW-X5q" kind="show" id="f1g-aL-X3u"/>
+                                    <segue destination="9fP-iW-X5q" kind="show" id="GC1-mP-6nd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="За" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-lc-IiY">
@@ -280,11 +428,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всего часов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adM-gM-44q">
-                                <rect key="frame" x="16" y="226" width="127" height="20"/>
+                                <rect key="frame" x="16" y="226" width="118" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="b9l-UQ-FNv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -294,57 +442,57 @@
                                     <constraint firstAttribute="height" constant="20" id="A2w-Lr-cMj"/>
                                     <constraint firstAttribute="width" constant="60" id="cQj-GX-NcS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Из них за 15 дней" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1J-Fv-M3j">
-                                <rect key="frame" x="16" y="254" width="127" height="20"/>
+                                <rect key="frame" x="16" y="254" width="118" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="WKM-Iy-N52"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="ffb-Ag-aap"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ночных часов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gff-J1-fdo">
-                                <rect key="frame" x="16" y="306" width="129.5" height="20"/>
+                                <rect key="frame" x="16" y="306" width="129" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Chp-NZ-eJT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="nFO-nx-oaq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="За 15 дней" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-3e-4Ci">
-                                <rect key="frame" x="16" y="334" width="76" height="20"/>
+                                <rect key="frame" x="16" y="334" width="71.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="i6i-hg-4iG"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="j4g-Zz-qtO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В праздники часов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-db-2EW">
-                                <rect key="frame" x="16" y="386" width="174.5" height="20"/>
+                                <rect key="frame" x="16" y="386" width="173" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="JHt-tM-eM5"/>
                                     <constraint firstAttribute="height" constant="20" id="faw-g7-QWu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="sTY-t9-z8F"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Придёт в" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWv-8e-q1Y">
-                                <rect key="frame" x="16" y="414" width="65" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Придёт в аванс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWv-8e-q1Y">
+                                <rect key="frame" x="16" y="414" width="106" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Dqa-ln-QGm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -361,21 +509,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="За месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-Py-weS">
-                                <rect key="frame" x="16" y="525" width="227.5" height="30"/>
+                                <rect key="frame" x="16" y="525" width="200.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WzN-WI-6Mu"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="pNF-ep-7rU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPF-bc-lav">
-                                <rect key="frame" x="259.5" y="525" width="138.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100 000₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPF-bc-lav">
+                                <rect key="frame" x="232.5" y="525" width="165.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qSM-cG-BpU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="30"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -387,7 +535,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Dji-Bw-wD9"/>
                                     <constraint firstAttribute="height" constant="30" id="WeZ-DE-ARS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -401,26 +549,26 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="w8P-Yz-wDF"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="wPR-d4-8ke"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+ 50 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkM-kt-URT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+ 50 000₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkM-kt-URT">
                                 <rect key="frame" x="117" y="587" width="281" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IXP-lq-5kQ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XHu-iR-ixf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 50 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKy-zg-z7N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 50 000₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKy-zg-z7N">
                                 <rect key="frame" x="117" y="649" width="281" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eix-eD-XMs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -451,7 +599,7 @@
                                     <constraint firstAttribute="height" constant="20" id="g97-Zo-9ZX"/>
                                     <constraint firstAttribute="width" constant="60" id="ibR-je-eAJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -461,7 +609,7 @@
                                     <constraint firstAttribute="height" constant="20" id="SJw-I8-sRJ"/>
                                     <constraint firstAttribute="width" constant="60" id="TOj-j5-CTF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -471,7 +619,7 @@
                                     <constraint firstAttribute="height" constant="20" id="DIb-ub-Tb8"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="dEh-Hc-8sL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -481,17 +629,7 @@
                                     <constraint firstAttribute="width" constant="60" id="33B-bH-MFP"/>
                                     <constraint firstAttribute="height" constant="20" id="XW5-EN-12Z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="аванс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-wI-Sc3">
-                                <rect key="frame" x="85" y="411" width="60" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Z4Q-47-9g8"/>
-                                    <constraint firstAttribute="height" constant="20" id="erF-k7-ewb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -523,7 +661,6 @@
                             <constraint firstItem="z1J-Fv-M3j" firstAttribute="leading" secondItem="adM-gM-44q" secondAttribute="leading" id="KIS-fs-tgx"/>
                             <constraint firstItem="Xuy-ki-tRN" firstAttribute="trailing" secondItem="ktt-D9-ovm" secondAttribute="trailing" constant="16" id="MMc-uq-VMH"/>
                             <constraint firstItem="QyW-Py-weS" firstAttribute="top" secondItem="EBI-NV-Nla" secondAttribute="bottom" constant="32" id="OE5-Rp-ogn"/>
-                            <constraint firstItem="fLj-wI-Sc3" firstAttribute="leading" secondItem="xWv-8e-q1Y" secondAttribute="trailing" constant="4" id="OkK-3t-l6D"/>
                             <constraint firstItem="QyW-Py-weS" firstAttribute="leading" secondItem="Xuy-ki-tRN" secondAttribute="leading" constant="16" id="Ooo-sS-AR5"/>
                             <constraint firstItem="z1J-Fv-M3j" firstAttribute="top" secondItem="adM-gM-44q" secondAttribute="bottom" constant="8" id="Pbt-Uk-2cO"/>
                             <constraint firstItem="Xuy-ki-tRN" firstAttribute="trailing" secondItem="AkM-kt-URT" secondAttribute="trailing" constant="16" id="RPZ-uP-CdS"/>
@@ -540,7 +677,6 @@
                             <constraint firstItem="adM-gM-44q" firstAttribute="top" secondItem="wsI-lc-IiY" secondAttribute="bottom" constant="16" id="gMf-0h-puo"/>
                             <constraint firstItem="EBI-NV-Nla" firstAttribute="top" secondItem="xWv-8e-q1Y" secondAttribute="bottom" constant="44" id="hB8-Y9-d5E"/>
                             <constraint firstItem="JO3-3e-4Ci" firstAttribute="top" secondItem="Gff-J1-fdo" secondAttribute="bottom" constant="8" id="jbK-m9-noO"/>
-                            <constraint firstItem="fLj-wI-Sc3" firstAttribute="firstBaseline" secondItem="xWv-8e-q1Y" secondAttribute="baseline" id="kG8-T0-uJw"/>
                             <constraint firstItem="adM-gM-44q" firstAttribute="leading" secondItem="Xuy-ki-tRN" secondAttribute="leading" constant="16" id="kxl-gE-Gef"/>
                             <constraint firstItem="th9-PR-cfr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Na-a4-M6a" secondAttribute="leading" id="lAl-vz-EVI"/>
                             <constraint firstItem="ktt-D9-ovm" firstAttribute="top" secondItem="Xuy-ki-tRN" secondAttribute="top" constant="16" id="lkq-Di-e2z"/>
@@ -570,7 +706,6 @@
                         <outlet property="nightHourseMounthLable" destination="th9-PR-cfr" id="M2W-Fv-A6E"/>
                         <outlet property="secondHalfSalaryLable" destination="HKy-zg-z7N" id="teF-SX-7Tk"/>
                         <outlet property="selebrationHourseLable" destination="fRW-EZ-tH4" id="lcE-gM-bcS"/>
-                        <outlet property="whenSalSelebrationComeLable" destination="fLj-wI-Sc3" id="dZ9-Aq-VjM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMg-aw-iKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -585,40 +720,152 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тут пока можно задать свою ставку в час" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGA-8Q-kRE">
-                                <rect key="frame" x="57" y="418" width="300" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dog" translatesAutoresizingMaskIntoConstraints="NO" id="GZ5-k5-zvj">
+                                <rect key="frame" x="32" y="32" width="96" height="96"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HrU-8U-Vaj"/>
-                                    <constraint firstAttribute="width" constant="300" id="XLh-E4-9Ms"/>
+                                    <constraint firstAttribute="width" constant="96" id="3M8-Ql-9ZG"/>
+                                    <constraint firstAttribute="height" constant="96" id="cc9-4C-jRb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Олег" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-gq-NES">
+                                <rect key="frame" x="136" y="44" width="270" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WtN-Sd-oSy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hY3-9B-sar">
-                                <rect key="frame" x="157" y="500" width="100" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спиридонов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qc-qx-bgt">
+                                <rect key="frame" x="136" y="84" width="270" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="acw-ZG-tds"/>
-                                    <constraint firstAttribute="height" constant="50" id="uy9-rA-Gym"/>
+                                    <constraint firstAttribute="height" constant="40" id="RWe-k2-d2m"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="jHW-Y2-gWp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Твоя ставка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWR-jq-DmQ">
+                                <rect key="frame" x="8" y="160" width="398" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="5fp-UE-d2A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="528 рублей/час" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVh-pN-7r8">
+                                <rect key="frame" x="281" y="162.5" width="125" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Kdi-i6-gKV"/>
+                                    <constraint firstAttribute="height" constant="20" id="u69-Ok-29w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLF-9j-wk0">
+                                <rect key="frame" x="283.5" y="193" width="120" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="97F-tz-Gps"/>
+                                    <constraint firstAttribute="height" constant="34.5" id="ZLl-iw-gcg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                                <connections>
+                                    <segue destination="4Ej-5K-Nbg" kind="showDetail" id="Bck-yH-m2Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ig6-I8-mN7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hY3-9B-sar" firstAttribute="centerX" secondItem="Ig6-I8-mN7" secondAttribute="centerX" id="KZK-16-KGd"/>
-                            <constraint firstItem="RGA-8Q-kRE" firstAttribute="centerY" secondItem="Ig6-I8-mN7" secondAttribute="centerY" id="W65-TB-QpL"/>
-                            <constraint firstItem="RGA-8Q-kRE" firstAttribute="centerX" secondItem="Ig6-I8-mN7" secondAttribute="centerX" id="XdU-aB-qBM"/>
-                            <constraint firstItem="hY3-9B-sar" firstAttribute="top" secondItem="RGA-8Q-kRE" secondAttribute="bottom" constant="32" id="atQ-eW-KTt"/>
+                            <constraint firstItem="GZ5-k5-zvj" firstAttribute="leading" secondItem="Ig6-I8-mN7" secondAttribute="leading" constant="32" id="1L4-eF-4hj"/>
+                            <constraint firstItem="BS5-gq-NES" firstAttribute="top" secondItem="Ig6-I8-mN7" secondAttribute="top" constant="44" id="4Ef-8C-Rbu"/>
+                            <constraint firstItem="9qc-qx-bgt" firstAttribute="leading" secondItem="GZ5-k5-zvj" secondAttribute="trailing" constant="8" id="8dt-o5-6lR"/>
+                            <constraint firstItem="cWR-jq-DmQ" firstAttribute="top" secondItem="GZ5-k5-zvj" secondAttribute="bottom" constant="32" id="GvO-Ze-h51"/>
+                            <constraint firstItem="9qc-qx-bgt" firstAttribute="top" secondItem="BS5-gq-NES" secondAttribute="bottom" id="Osy-Im-sp3"/>
+                            <constraint firstItem="IVh-pN-7r8" firstAttribute="centerY" secondItem="cWR-jq-DmQ" secondAttribute="centerY" id="bQM-7W-ahe"/>
+                            <constraint firstItem="cWR-jq-DmQ" firstAttribute="leading" secondItem="Ig6-I8-mN7" secondAttribute="leading" constant="8" id="cKA-Wq-vQ3"/>
+                            <constraint firstItem="LLF-9j-wk0" firstAttribute="top" secondItem="IVh-pN-7r8" secondAttribute="bottom" constant="10.5" id="ctf-jv-4tI"/>
+                            <constraint firstItem="Ig6-I8-mN7" firstAttribute="trailing" secondItem="IVh-pN-7r8" secondAttribute="trailing" constant="8" id="gml-T3-5xa"/>
+                            <constraint firstItem="GZ5-k5-zvj" firstAttribute="top" secondItem="Ig6-I8-mN7" secondAttribute="top" constant="32" id="hvz-KM-ae7"/>
+                            <constraint firstItem="Ig6-I8-mN7" firstAttribute="trailing" secondItem="cWR-jq-DmQ" secondAttribute="trailing" constant="8" id="jng-Lm-1Rr"/>
+                            <constraint firstItem="Ig6-I8-mN7" firstAttribute="trailing" secondItem="BS5-gq-NES" secondAttribute="trailing" constant="8" id="uaZ-qb-pIT"/>
+                            <constraint firstItem="BS5-gq-NES" firstAttribute="leading" secondItem="GZ5-k5-zvj" secondAttribute="trailing" constant="8" id="xL3-PK-TXu"/>
+                            <constraint firstItem="Ig6-I8-mN7" firstAttribute="trailing" secondItem="9qc-qx-bgt" secondAttribute="trailing" constant="8" id="yIN-OQ-zmo"/>
+                            <constraint firstItem="LLF-9j-wk0" firstAttribute="centerX" secondItem="IVh-pN-7r8" secondAttribute="centerX" id="yri-oq-7y3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dfe-J6-tc3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGA-lo-0Yl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="62"/>
+            <point key="canvasLocation" x="64" y="-904"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FLL-Bz-5a8">
+            <objects>
+                <viewController id="4Ej-5K-Nbg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csY-f8-DW8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажи текущую ставку в час в рублях. Указать нужно ставку, которую ты получаешь после вычета всех налогов. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7e-8h-iQT">
+                                <rect key="frame" x="8" y="200" width="398" height="73.5"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSk-0v-1ff">
+                                <rect key="frame" x="167" y="423" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Va2-4y-ifc"/>
+                                    <constraint firstAttribute="height" constant="40" id="WQm-Ip-68C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhe-eH-hlD">
+                                <rect key="frame" x="147" y="483" width="120" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="BJm-Hp-4lH"/>
+                                    <constraint firstAttribute="height" constant="35" id="NHd-Fb-taV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iA-q6-JN2">
+                                <rect key="frame" x="16" y="16" width="74" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Ve5-dG-ANX"/>
+                                    <constraint firstAttribute="height" constant="35" id="wQw-Y7-3wn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3f6-hQ-Ij4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o7e-8h-iQT" firstAttribute="leading" secondItem="3f6-hQ-Ij4" secondAttribute="leading" constant="8" id="6nG-UX-dES"/>
+                            <constraint firstItem="bhe-eH-hlD" firstAttribute="top" secondItem="XSk-0v-1ff" secondAttribute="bottom" constant="20" id="E95-gW-znS"/>
+                            <constraint firstItem="2iA-q6-JN2" firstAttribute="top" secondItem="3f6-hQ-Ij4" secondAttribute="top" constant="16" id="EBD-W3-aWn"/>
+                            <constraint firstItem="o7e-8h-iQT" firstAttribute="centerX" secondItem="csY-f8-DW8" secondAttribute="centerX" id="U1B-Ox-0GR"/>
+                            <constraint firstItem="XSk-0v-1ff" firstAttribute="centerX" secondItem="csY-f8-DW8" secondAttribute="centerX" id="aII-cH-rhk"/>
+                            <constraint firstItem="o7e-8h-iQT" firstAttribute="top" secondItem="3f6-hQ-Ij4" secondAttribute="top" constant="200" id="fBs-VV-lI4"/>
+                            <constraint firstItem="2iA-q6-JN2" firstAttribute="leading" secondItem="3f6-hQ-Ij4" secondAttribute="leading" constant="16" id="hAE-XS-wI4"/>
+                            <constraint firstItem="3f6-hQ-Ij4" firstAttribute="trailing" secondItem="o7e-8h-iQT" secondAttribute="trailing" constant="8" id="icX-Op-jdJ"/>
+                            <constraint firstItem="bhe-eH-hlD" firstAttribute="centerX" secondItem="csY-f8-DW8" secondAttribute="centerX" id="mw2-zL-Biq"/>
+                            <constraint firstItem="XSk-0v-1ff" firstAttribute="centerY" secondItem="csY-f8-DW8" secondAttribute="centerY" id="uwD-J3-H97"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tyE-nz-T2u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLK-dI-Gnz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="-904"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PZA-r5-X1p">
@@ -642,6 +889,8 @@
     <resources>
         <image name="Dog" width="512" height="512"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
+        <image name="gearshape.2.fill" catalog="system" width="128" height="101"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

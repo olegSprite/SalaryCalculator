@@ -30,8 +30,7 @@ class CounterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
+        }
 }
 
 // MARK: - PickerViewDataSource

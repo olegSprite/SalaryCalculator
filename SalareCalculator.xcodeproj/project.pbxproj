@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D575664C2B5BB80200ABBDCA /* Tochka_Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */; };
+		D575664D2B5BB80500ABBDCA /* TT_Norms_Tochka_Extended_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */; };
+		D575664E2B5BB80700ABBDCA /* TT_Norms_Tochka_Extended_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */; };
 		D57FD1892B59C0E600C710F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1882B59C0E600C710F5 /* AppDelegate.swift */; };
 		D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */; };
 		D57FD18D2B59C0E600C710F5 /* CurentMounthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */; };
@@ -28,9 +31,9 @@
 		D57FD1962B59C0E800C710F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D57FD1A22B5A678400C710F5 /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 		D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
-		D57FD1A82B5ABE9200C710F5 /* TT Norms Tochka Extended Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Norms Tochka Extended Regular.otf"; path = "../../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT Norms Tochka Extended Regular.otf"; sourceTree = "<group>"; };
-		D57FD1A92B5ABE9400C710F5 /* TT Norms Tochka Extended Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Norms Tochka Extended Bold.otf"; sourceTree = "<group>"; };
-		D57FD1AA2B5ABEB500C710F5 /* Tochka Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tochka Script.ttf"; sourceTree = "<group>"; };
+		D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TT_Norms_Tochka_Extended_Regular.otf; path = "../../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT_Norms_Tochka_Extended_Regular.otf"; sourceTree = "<group>"; };
+		D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT_Norms_Tochka_Extended_Bold.otf; sourceTree = "<group>"; };
+		D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tochka_Script.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +83,9 @@
 		D57FD1A62B5ABE8500C710F5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				D57FD1AA2B5ABEB500C710F5 /* Tochka Script.ttf */,
-				D57FD1A92B5ABE9400C710F5 /* TT Norms Tochka Extended Bold.otf */,
-				D57FD1A82B5ABE9200C710F5 /* TT Norms Tochka Extended Regular.otf */,
+				D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */,
+				D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */,
+				D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -148,6 +151,9 @@
 				D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */,
 				D57FD1922B59C0E800C710F5 /* Assets.xcassets in Resources */,
 				D57FD1902B59C0E600C710F5 /* Main.storyboard in Resources */,
+				D575664D2B5BB80500ABBDCA /* TT_Norms_Tochka_Extended_Bold.otf in Resources */,
+				D575664C2B5BB80200ABBDCA /* Tochka_Script.ttf in Resources */,
+				D575664E2B5BB80700ABBDCA /* TT_Norms_Tochka_Extended_Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

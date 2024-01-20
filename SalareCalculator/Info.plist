@@ -4,9 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Tochka Script.ttf</string>
-		<string>TT Norms Tochka Extended Bold</string>
-		<string>TT Norms Tochka Extended Regular</string>
+		<string>Tochka_Script.ttf</string>
+		<string>TT_Norms_Tochka_Extended_Bold.otf</string>
+		<string>TT_Norms_Tochka_Extended_Regular.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
