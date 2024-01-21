@@ -33,4 +33,5 @@ enum Mounth: String {
     case october = "Октябрь"
     case november = "Ноябрь"
     case december = "Декабрь"
+    case none = "Не задан"
 }

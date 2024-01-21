@@ -19,7 +19,7 @@
 		D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */; };
 		D57FD1A32B5A678400C710F5 /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A22B5A678400C710F5 /* SalaryModel.swift */; };
 		D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */; };
-		D5CB84362B5C76CC000377A2 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB84352B5C76CC000377A2 /* UserDefaults.swift */; };
+		D5CB84362B5C76CC000377A2 /* SavingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB84352B5C76CC000377A2 /* SavingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TT_Norms_Tochka_Extended_Regular.otf; path = "../../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT_Norms_Tochka_Extended_Regular.otf"; sourceTree = "<group>"; };
 		D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT_Norms_Tochka_Extended_Bold.otf; sourceTree = "<group>"; };
 		D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tochka_Script.ttf; sourceTree = "<group>"; };
-		D5CB84352B5C76CC000377A2 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		D5CB84352B5C76CC000377A2 /* SavingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		D5CB84342B5C76A0000377A2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D5CB84352B5C76CC000377A2 /* UserDefaults.swift */,
+				D5CB84352B5C76CC000377A2 /* SavingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 				D57566502B5C561D00ABBDCA /* PickerView.swift in Sources */,
 				D57FD1A32B5A678400C710F5 /* SalaryModel.swift in Sources */,
 				D57FD1892B59C0E600C710F5 /* AppDelegate.swift in Sources */,
-				D5CB84362B5C76CC000377A2 /* UserDefaults.swift in Sources */,
+				D5CB84362B5C76CC000377A2 /* SavingService.swift in Sources */,
 				D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

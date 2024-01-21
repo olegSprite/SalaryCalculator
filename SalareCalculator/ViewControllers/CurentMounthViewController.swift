@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CurentMounthViewController: UIViewController {
+class CurentMounthViewController: UIViewController, SavingServiceDelegate {
     
     @IBOutlet weak private var hoursMounthLable: UILabel!
     @IBOutlet weak private var hoursHalfLable: UILabel!
@@ -20,58 +20,66 @@ class CurentMounthViewController: UIViewController {
     @IBOutlet weak private var mounthLable: UILabel!
     @IBOutlet weak private var whenSalSelebrationComeLable: UILabel!
     
+    let savingService = SavingService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let savingSalary = UserDefaults.standard.object(forKey: "Save") as? Data {
-            let decoder = JSONDecoder()
-            if let savedSalary = try? decoder.decode(SalaryModel.self, from: savingSalary) { // не грузит все данные и обновляется только 1 раз при запуске. Нужно все засунут в сервис загрузки юзердефолтс
-                hoursMounthLable.text = savedSalary.hoursMounth
-                hoursHalfLable.text = savedSalary.hoursHalf
-                nightHourseMounthLable.text = savedSalary.nightHourseMounth
-                nightHourseHalfLable.text = savedSalary.nightHourseHalf
-                selebrationHourseLable.text = savedSalary.selebrationHourse
-                allSalaryLable.text = savedSalary.allSalary
-                firstHalfSalaryLable.text = savedSalary.firstHalfSalary
-                secondHalfSalaryLable.text = savedSalary.secondHalfSalary
-                mounthLable.text = savedSalary.mounth
-                
-                switch savedSalary.mounth {
-                case "Январь":
-                    whenSalSelebrationComeLable.isHidden = false
-                    whenSalSelebrationComeLable.text = "Придёт в аванс"
-                case "Февраль":
-                    whenSalSelebrationComeLable.isHidden = false
-                    whenSalSelebrationComeLable.text = "Придёт в расчёт"
-                case "Март":
-                    whenSalSelebrationComeLable.isHidden = false
-                    whenSalSelebrationComeLable.text = "Придёт в аванс"
-                case "Апрель":
-                    whenSalSelebrationComeLable.isEnabled = false
-                case "Май":
-                    whenSalSelebrationComeLable.isHidden = false
-                    whenSalSelebrationComeLable.text = "Придёт в аванс"
-                case "Июнь":
-                    whenSalSelebrationComeLable.isHidden = false
-                    whenSalSelebrationComeLable.text = "Придёт в аванс"
-                case "Июль":
-                    whenSalSelebrationComeLable.isHidden = true
-                case "Август":
-                    whenSalSelebrationComeLable.isHidden = true
-                case "Сентябрь":
-                    whenSalSelebrationComeLable.isHidden = true
-                case "Октябрь":
-                    whenSalSelebrationComeLable.isHidden = true
-                case "Ноябрь":
-                    whenSalSelebrationComeLable.isHidden = false
-                    whenSalSelebrationComeLable.text = "Придёт в аванс"
-                case "Декабрь":
-                    whenSalSelebrationComeLable.isHidden = true
-                default:
-                    whenSalSelebrationComeLable.isHidden = true
-                }
-        }
+        savingService.delegate = self
+
+    }
+    
+    func printTo(){
+        print("Тест")
+    }
+    
+    func loadCurentSalary(savedSalary: SalaryModel) {
         
-            }
+        print("Отображение вью") // не срабатывает метод для обновления вью
+            
+        self.hoursMounthLable.text = savedSalary.hoursMounth
+        self.hoursHalfLable.text = savedSalary.hoursHalf
+        self.nightHourseMounthLable.text = savedSalary.nightHourseMounth
+        self.nightHourseHalfLable.text = savedSalary.nightHourseHalf
+        self.selebrationHourseLable.text = savedSalary.selebrationHourse
+        self.allSalaryLable.text = savedSalary.allSalary
+        self.firstHalfSalaryLable.text = savedSalary.firstHalfSalary
+        self.secondHalfSalaryLable.text = savedSalary.secondHalfSalary
+        self.mounthLable.text = savedSalary.mounth
+            
+        switch savedSalary.mounth {
+            case "Январь":
+            self.whenSalSelebrationComeLable.isHidden = false
+            self.whenSalSelebrationComeLable.text = "Придёт в аванс"
+            case "Февраль":
+            self.whenSalSelebrationComeLable.isHidden = false
+            self.whenSalSelebrationComeLable.text = "Придёт в расчёт"
+            case "Март":
+            self.whenSalSelebrationComeLable.isHidden = false
+            self.whenSalSelebrationComeLable.text = "Придёт в аванс"
+            case "Апрель":
+            self.whenSalSelebrationComeLable.isEnabled = false
+            case "Май":
+            self.whenSalSelebrationComeLable.isHidden = false
+            self.whenSalSelebrationComeLable.text = "Придёт в аванс"
+            case "Июнь":
+            self.whenSalSelebrationComeLable.isHidden = false
+            self.whenSalSelebrationComeLable.text = "Придёт в аванс"
+            case "Июль":
+            self.whenSalSelebrationComeLable.isHidden = true
+            case "Август":
+            self.whenSalSelebrationComeLable.isHidden = true
+            case "Сентябрь":
+            self.whenSalSelebrationComeLable.isHidden = true
+            case "Октябрь":
+            self.whenSalSelebrationComeLable.isHidden = true
+            case "Ноябрь":
+            self.whenSalSelebrationComeLable.isHidden = false
+            self.whenSalSelebrationComeLable.text = "Придёт в аванс"
+            case "Декабрь":
+            self.whenSalSelebrationComeLable.isHidden = true
+            default:
+            self.whenSalSelebrationComeLable.isHidden = true
         }
     }
+}

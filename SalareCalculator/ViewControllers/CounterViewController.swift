@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+protocol CounterViewControllerDelegate {
+    
+    func savingSalary(salaryModel: SalaryModel)
+    func acceptSave()
+}
+
 class CounterViewController: UIViewController {
     
     @IBOutlet weak private var mounthPicker: UIPickerView!
@@ -34,7 +40,7 @@ class CounterViewController: UIViewController {
     
     private var rate: Int = 528
     
-    var curentMounth: Mounth?
+    var curentMounth: Mounth = .none
     let mounth: [Mounth] = [
         .january,
         .february,
@@ -50,10 +56,15 @@ class CounterViewController: UIViewController {
         .december
     ]
     
+    var delegate: CounterViewControllerDelegate?
+    let savingService = SavingService()
+    
     //MARK: - Life Sircle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.delegate = savingService
         
         yourReateIsCountingLable.text = "Твоя зарплата считается по ставке \(rate) ₽/час"
         
@@ -180,22 +191,11 @@ class CounterViewController: UIViewController {
     @IBAction func saveButtonTap(_ sender: Any) {
         returnSalaryToScreen()
         
-        let savingSalary = SalaryModel(
-            hoursMounth: hoursMounthTextField.text ?? "Ошибка",
-            hoursHalf: hoursHalfTextField.text ?? "Ошибка",
-            nightHourseMounth: nightHourseMounthTextField.text ?? "Ошибка",
-            nightHourseHalf: nightHourseHalfTextField.text ?? "Ошибка",
-            selebrationHourse: selebrationHourseTextField.text ?? "Ошибка",
-            nightSelebrationHourse: selebrationNightTextField.text ?? "Ошибка",
-            allSalary: allSalaryLable.text ?? "Ошибка",
-            firstHalfSalary: firstHalfSalaryLable.text ?? "Ошибка",
-            secondHalfSalary: secondHalfSalaryLable.text ?? "Ошибка",
-            mounth: curentMounth?.rawValue ?? "Ошибка")
+        let salaryModel = SalaryModel(hoursMounth: hoursMounthTextField.text ?? "Ошибка", hoursHalf: hoursHalfTextField.text ?? "Ошибка", nightHourseMounth: nightHourseMounthTextField.text ?? "Ошибка", nightHourseHalf: nightHourseHalfTextField.text ?? "Ошибка", selebrationHourse: selebrationHourseTextField.text ?? "Ошибка", nightSelebrationHourse: selebrationNightTextField.text ?? "Ошибка", allSalary: allSalaryLable.text ?? "Ошибка", firstHalfSalary: firstHalfSalaryLable.text ?? "Ошибка", secondHalfSalary: secondHalfSalaryLable.text ?? "Ошибка", mounth: curentMounth.rawValue)
         
-        let encoder = JSONEncoder()
-        if let encodedSalaryModel = try? encoder.encode(savingSalary) {
-            UserDefaults.standard.set(encodedSalaryModel, forKey: "Save")
-        }
+        delegate?.savingSalary(salaryModel: salaryModel)
+        delegate?.acceptSave()
+    
         self.dismiss(animated: true, completion: nil)
     }
 }
