@@ -88,8 +88,8 @@
 		D57FD1872B59C0E600C710F5 /* SalareCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				D5CB84342B5C76A0000377A2 /* Services */,
 				D57566522B5C570500ABBDCA /* Models */,
+				D5CB84342B5C76A0000377A2 /* Services */,
 				D57566512B5C56DF00ABBDCA /* ViewControllers */,
 				D57FD1882B59C0E600C710F5 /* AppDelegate.swift */,
 				D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */,

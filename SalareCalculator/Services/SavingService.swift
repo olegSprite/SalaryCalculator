@@ -8,15 +8,11 @@
 import Foundation
 import UIKit
 
-protocol SavingServiceDelegate {
-    func loadCurentSalary(savedSalary: SalaryModel)
-}
-
-class SavingService: CounterViewControllerDelegate {
+class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerDelegate {
     
     let defaults = UserDefaults.standard
     
-    var delegate: SavingServiceDelegate?
+    // MARK: - Functions
     
     func savingSalary(salaryModel: SalaryModel) {
         
@@ -26,14 +22,14 @@ class SavingService: CounterViewControllerDelegate {
         }
     }
     
-    func acceptSave() {
+    func acceptSave() -> SalaryModel {
         if let savingSalary = UserDefaults.standard.object(forKey: "Save") as? Data {
             let decoder = JSONDecoder()
             if let savedSalary = try? decoder.decode(SalaryModel.self, from: savingSalary) {
-                
-                delegate?.loadCurentSalary(savedSalary: savedSalary)
-                print("Произошла загрузка")
-                }
+                return savedSalary
+            }
         }
+        let savingSalary = SalaryModel()
+        return savingSalary
     }
 }

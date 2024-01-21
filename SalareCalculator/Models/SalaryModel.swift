@@ -8,16 +8,16 @@
 import Foundation
 
 struct SalaryModel: Encodable, Decodable {
-    var hoursMounth: String
-    var hoursHalf: String
-    var nightHourseMounth: String
-    var nightHourseHalf: String
-    var selebrationHourse: String
-    var nightSelebrationHourse: String
-    var allSalary: String
-    var firstHalfSalary: String
-    var secondHalfSalary: String
-    var mounth: String
+    var hoursMounth: String = "Не задан"
+    var hoursHalf: String = "Не задан"
+    var nightHourseMounth: String = "Не задан"
+    var nightHourseHalf: String = "Не задан"
+    var selebrationHourse: String = "Не задан"
+    var nightSelebrationHourse: String = "Не задан"
+    var allSalary: String = "Не задан"
+    var firstHalfSalary: String = "Не задан"
+    var secondHalfSalary: String = "Не задан"
+    var mounth: String = "Не задан"
 }
 
 enum Mounth: String {
