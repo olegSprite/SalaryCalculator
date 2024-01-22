@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CurentMounthViewContriollerDelegate {
-    func acceptSave() -> SalaryModel
+    func returnSaveSalary() -> SalaryModel
 }
 
 class CurentMounthViewController: UIViewController, CounterViewControllerDelegate2 {
@@ -38,11 +38,11 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
     }
     
     func accept() {
-        if let savedSalary = delegate?.acceptSave() {
+        if let savedSalary = delegate?.returnSaveSalary() {
             self.savedSalary = savedSalary
         }
         
-        self.hoursMounthLable?.text = (savedSalary?.hoursMounth ?? "Ошибка") + " ч."
+        hoursMounthLable?.text = (savedSalary?.hoursMounth ?? "Ошибка") + " ч."
         hoursHalfLable?.text = (savedSalary?.hoursHalf ?? "Ошибка") + " ч."
         nightHourseMounthLable?.text = (savedSalary?.nightHourseMounth ?? "Ошибка") + " ч."
         nightHourseHalfLable?.text = (savedSalary?.nightHourseHalf ?? "Ошибка") + " ч."
@@ -85,6 +85,13 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
             whenSalSelebrationComeLable?.isHidden = true
         default:
             whenSalSelebrationComeLable?.isHidden = true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "getDataSagay" {
+            let destinationVC = segue.destination as! CounterViewController
+            destinationVC.delegate2 = self
         }
     }
     

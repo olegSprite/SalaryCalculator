@@ -11,9 +11,11 @@ import UIKit
 protocol CounterViewControllerDelegate {
     
     func savingSalary(salaryModel: SalaryModel)
+    func returnSaveRate() -> String
 }
 
 protocol CounterViewControllerDelegate2 {
+    
     func accept()
 }
 
@@ -41,7 +43,7 @@ class CounterViewController: UIViewController {
     @IBOutlet weak private var saveButton: UIButton!
     @IBOutlet weak private var backButton: UIButton!
     
-    private var rate: Int = 528
+    private var rate: Int = 0
     
     var curentMounth: Mounth = .none
     let mounth: [Mounth] = [
@@ -63,7 +65,6 @@ class CounterViewController: UIViewController {
     var delegate: CounterViewControllerDelegate?
     var delegate2: CounterViewControllerDelegate2?
     let savingService = SavingService()
-    let curentVC = CurentMounthViewController()
     
     //MARK: - Life Sircle
     
@@ -71,7 +72,10 @@ class CounterViewController: UIViewController {
         super.viewDidLoad()
         
         self.delegate = savingService
-        self.delegate2 = curentVC
+        
+        if let rate = delegate?.returnSaveRate() {
+            self.rate = Int(rate)!
+        }
         
         yourReateIsCountingLable.text = "Твоя зарплата считается по ставке \(rate) ₽/час"
         
@@ -205,6 +209,8 @@ class CounterViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         
         delegate2?.accept()
+        navigationController?.popViewController(animated: true)
+        
         print("Обновляем контроллер")
     }
 }
