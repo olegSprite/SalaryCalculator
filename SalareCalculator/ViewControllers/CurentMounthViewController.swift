@@ -11,7 +11,7 @@ protocol CurentMounthViewContriollerDelegate {
     func acceptSave() -> SalaryModel
 }
 
-class CurentMounthViewController: UIViewController {
+class CurentMounthViewController: UIViewController, CounterViewControllerDelegate2 {
     
     @IBOutlet weak private var hoursMounthLable: UILabel!
     @IBOutlet weak private var hoursHalfLable: UILabel!
@@ -32,53 +32,64 @@ class CurentMounthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.delegate = savingService
+        
+        accept()
+    }
+    
+    func accept() {
         if let savedSalary = delegate?.acceptSave() {
             self.savedSalary = savedSalary
         }
         
-        hoursMounthLable.text = savedSalary?.hoursMounth
-        hoursHalfLable.text = savedSalary?.hoursHalf
-        nightHourseMounthLable.text = savedSalary?.nightHourseMounth
-        nightHourseHalfLable.text = savedSalary?.nightHourseHalf
-        selebrationHourseLable.text = savedSalary?.selebrationHourse
-        allSalaryLable.text = savedSalary?.allSalary
-        firstHalfSalaryLable.text = savedSalary?.firstHalfSalary
-        secondHalfSalaryLable.text = savedSalary?.secondHalfSalary
-        mounthLable.text = savedSalary?.mounth
+        self.hoursMounthLable?.text = (savedSalary?.hoursMounth ?? "Ошибка") + " ч."
+        hoursHalfLable?.text = (savedSalary?.hoursHalf ?? "Ошибка") + " ч."
+        nightHourseMounthLable?.text = (savedSalary?.nightHourseMounth ?? "Ошибка") + " ч."
+        nightHourseHalfLable?.text = (savedSalary?.nightHourseHalf ?? "Ошибка") + " ч."
+        selebrationHourseLable?.text = (savedSalary?.selebrationHourse ?? "Ошибка") + " ч."
+        allSalaryLable?.text = savedSalary?.allSalary
+        firstHalfSalaryLable?.text = savedSalary?.firstHalfSalary
+        secondHalfSalaryLable?.text = savedSalary?.secondHalfSalary
+        mounthLable?.text = savedSalary?.mounth
         
         switch savedSalary?.mounth {
         case "Январь":
-            whenSalSelebrationComeLable.isHidden = false
-            whenSalSelebrationComeLable.text = "Придёт в аванс"
+            whenSalSelebrationComeLable?.isHidden = false
+            whenSalSelebrationComeLable?.text = "Придёт в аванс"
         case "Февраль":
             whenSalSelebrationComeLable.isHidden = false
-            whenSalSelebrationComeLable.text = "Придёт в расчёт"
+            whenSalSelebrationComeLable?.text = "Придёт в расчёт"
         case "Март":
-            whenSalSelebrationComeLable.isHidden = false
-            whenSalSelebrationComeLable.text = "Придёт в аванс"
+            whenSalSelebrationComeLable?.isHidden = false
+            whenSalSelebrationComeLable?.text = "Придёт в аванс"
         case "Апрель":
-            whenSalSelebrationComeLable.isEnabled = false
+            whenSalSelebrationComeLable?.isEnabled = false
         case "Май":
-            whenSalSelebrationComeLable.isHidden = false
-            whenSalSelebrationComeLable.text = "Придёт в аванс"
+            whenSalSelebrationComeLable?.isHidden = false
+            whenSalSelebrationComeLable?.text = "Придёт в аванс"
         case "Июнь":
-            whenSalSelebrationComeLable.isHidden = false
-            whenSalSelebrationComeLable.text = "Придёт в аванс"
+            whenSalSelebrationComeLable?.isHidden = false
+            whenSalSelebrationComeLable?.text = "Придёт в аванс"
         case "Июль":
-            whenSalSelebrationComeLable.isHidden = true
+            whenSalSelebrationComeLable?.isHidden = true
         case "Август":
-            whenSalSelebrationComeLable.isHidden = true
+            whenSalSelebrationComeLable?.isHidden = true
         case "Сентябрь":
-            whenSalSelebrationComeLable.isHidden = true
+            whenSalSelebrationComeLable?.isHidden = true
         case "Октябрь":
-            whenSalSelebrationComeLable.isHidden = true
+            whenSalSelebrationComeLable?.isHidden = true
         case "Ноябрь":
-            whenSalSelebrationComeLable.isHidden = false
-            whenSalSelebrationComeLable.text = "Придёт в аванс"
+            whenSalSelebrationComeLable?.isHidden = false
+            whenSalSelebrationComeLable?.text = "Придёт в аванс"
         case "Декабрь":
-            whenSalSelebrationComeLable.isHidden = true
+            whenSalSelebrationComeLable?.isHidden = true
         default:
-            whenSalSelebrationComeLable.isHidden = true
+            whenSalSelebrationComeLable?.isHidden = true
         }
+    }
+    
+    
+    @IBAction func profileTap(_ sender: Any) {
+        accept()
     }
 }

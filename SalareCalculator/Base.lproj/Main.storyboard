@@ -458,7 +458,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Профиль"/>
                                 <connections>
-                                    <segue destination="9fP-iW-X5q" kind="show" id="GC1-mP-6nd"/>
+                                    <action selector="profileTap:" destination="EQz-I4-nl4" eventType="touchUpInside" id="bgm-qS-HVc"/>
+                                    <segue destination="9fP-iW-X5q" kind="show" id="IRC-32-q2e"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="За" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-lc-IiY">
@@ -602,7 +603,7 @@
                                     <constraint firstAttribute="height" constant="30" id="IXP-lq-5kQ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XHu-iR-ixf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -611,7 +612,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eix-eD-XMs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

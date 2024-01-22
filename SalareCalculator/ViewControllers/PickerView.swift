@@ -31,39 +31,42 @@ extension CounterViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch row {
         case 0:
-            curentMounth = .january
+            curentMounth = .none
             enabledCelebration()
         case 1:
-            curentMounth = .february
+            curentMounth = .january
             enabledCelebration()
         case 2:
-            curentMounth = .march
+            curentMounth = .february
             enabledCelebration()
         case 3:
+            curentMounth = .march
+            enabledCelebration()
+        case 4:
             curentMounth = .april
             hideCelebration()
-        case 4:
+        case 5:
             curentMounth = .may
             enabledCelebration()
-        case 5:
+        case 6:
             curentMounth = .june
             enabledCelebration()
-        case 6:
+        case 7:
             curentMounth = .july
             hideCelebration()
-        case 7:
+        case 8:
             curentMounth = .august
             hideCelebration()
-        case 8:
+        case 9:
             curentMounth = .september
             hideCelebration()
-        case 9:
+        case 10:
             curentMounth = .october
             hideCelebration()
-        case 10:
+        case 11:
             curentMounth = .november
             enabledCelebration()
-        case 11:
+        case 12:
             curentMounth = .december
             hideCelebration()
         default:

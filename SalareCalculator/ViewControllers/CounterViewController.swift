@@ -13,6 +13,10 @@ protocol CounterViewControllerDelegate {
     func savingSalary(salaryModel: SalaryModel)
 }
 
+protocol CounterViewControllerDelegate2 {
+    func accept()
+}
+
 class CounterViewController: UIViewController {
     
     @IBOutlet weak private var mounthPicker: UIPickerView!
@@ -41,6 +45,7 @@ class CounterViewController: UIViewController {
     
     var curentMounth: Mounth = .none
     let mounth: [Mounth] = [
+        .none,
         .january,
         .february,
         .march,
@@ -56,7 +61,9 @@ class CounterViewController: UIViewController {
     ]
     
     var delegate: CounterViewControllerDelegate?
+    var delegate2: CounterViewControllerDelegate2?
     let savingService = SavingService()
+    let curentVC = CurentMounthViewController()
     
     //MARK: - Life Sircle
     
@@ -64,6 +71,7 @@ class CounterViewController: UIViewController {
         super.viewDidLoad()
         
         self.delegate = savingService
+        self.delegate2 = curentVC
         
         yourReateIsCountingLable.text = "Твоя зарплата считается по ставке \(rate) ₽/час"
         
@@ -195,5 +203,8 @@ class CounterViewController: UIViewController {
         delegate?.savingSalary(salaryModel: salaryModel)
     
         self.dismiss(animated: true, completion: nil)
+        
+        delegate2?.accept()
+        print("Обновляем контроллер")
     }
 }
