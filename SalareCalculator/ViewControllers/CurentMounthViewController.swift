@@ -88,6 +88,35 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
         }
     }
     
+//    func devideNumper(_ number: String) -> String {
+//        if number.count == 3 {
+//            return number
+//        }
+//        var array: [Character] = []
+//        var numberResult = number
+//        var result: String = ""
+//        var count = (number.count + 2) / 3
+//        
+//        for num in number {
+//            array.append(num)
+//        }
+//        
+//        switch count {
+//        case 2:
+//            var a: Array<Character> = numberResult.removeLast()
+//            var b: String = numberResult
+//            return b + a
+//        case 3:
+//            
+//        default:
+//            <#code#>
+//        }
+//        
+//        for i in array.reversed() {
+//            
+//        }
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "getDataSagay" {
             let destinationVC = segue.destination as! CounterViewController

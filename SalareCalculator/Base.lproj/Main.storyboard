@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLC-tt-h0g">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -143,7 +143,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AH6-li-OOE">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Часов" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AH6-li-OOE">
                                 <rect key="frame" x="140" y="326" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="L2e-j1-krv"/>
@@ -152,7 +152,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myU-rs-Zs8">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Часов" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myU-rs-Zs8">
                                 <rect key="frame" x="264" y="326" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="TsL-fE-8Kc"/>
@@ -171,7 +171,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-8i-6cP">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Часов" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-8i-6cP">
                                 <rect key="frame" x="140" y="409" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="K9s-va-Gxj"/>
@@ -265,7 +265,7 @@
                                     <outlet property="delegate" destination="6DU-52-co2" id="bFO-LJ-soa"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pr-dF-GDu">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Часов" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pr-dF-GDu">
                                 <rect key="frame" x="140" y="241" width="97" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="8Af-YN-sK8"/>
@@ -274,7 +274,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-cv-hvj">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Часов" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-cv-hvj">
                                 <rect key="frame" x="264" y="241" width="95" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="F3i-q8-bVr"/>
@@ -324,7 +324,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8X-39-mmd">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Часов" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8X-39-mmd">
                                 <rect key="frame" x="264" y="409" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="bAX-rO-ZRh"/>
@@ -334,7 +334,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zH-iV-vXV">
-                                <rect key="frame" x="288" y="20" width="110" height="35"/>
+                                <rect key="frame" x="152" y="651" width="110" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="2Bt-6o-ebV"/>
                                     <constraint firstAttribute="height" constant="35" id="QoC-fm-9GR"/>
@@ -370,6 +370,7 @@
                             <constraint firstItem="uXs-VP-G0W" firstAttribute="centerY" secondItem="SeV-io-hQD" secondAttribute="centerY" id="HJX-du-NSJ"/>
                             <constraint firstItem="kyz-0Z-DYX" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="trailing" constant="58" id="I2h-fP-fJY"/>
                             <constraint firstItem="HEl-dj-qBY" firstAttribute="leading" secondItem="OrK-zx-Ld2" secondAttribute="leading" id="J3o-Fa-f5A"/>
+                            <constraint firstItem="5zH-iV-vXV" firstAttribute="top" secondItem="HEl-dj-qBY" secondAttribute="bottom" constant="16" id="L4H-0v-PZd"/>
                             <constraint firstItem="ad1-df-5HU" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" constant="16" id="LiL-OH-sSL"/>
                             <constraint firstItem="CRP-6J-AhU" firstAttribute="top" secondItem="EQL-ze-5AW" secondAttribute="bottom" constant="16" id="Ngg-yg-b5d"/>
                             <constraint firstItem="uXs-VP-G0W" firstAttribute="leading" secondItem="8ms-KX-8aE" secondAttribute="leading" id="QoT-TA-SaB"/>
@@ -393,7 +394,6 @@
                             <constraint firstItem="pfc-7l-Adl" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" constant="16" id="fae-Eq-iTa"/>
                             <constraint firstItem="pfc-7l-Adl" firstAttribute="top" secondItem="bca-Xl-OJ8" secondAttribute="bottom" constant="16" id="fn3-TF-1y7"/>
                             <constraint firstItem="PGE-p7-Z7s" firstAttribute="centerX" secondItem="71z-E2-68X" secondAttribute="centerX" id="hoT-ol-shW"/>
-                            <constraint firstItem="5zH-iV-vXV" firstAttribute="top" secondItem="HEl-dj-qBY" secondAttribute="bottom" constant="-615" id="iFc-DB-0VM"/>
                             <constraint firstItem="3cp-pM-tdR" firstAttribute="leading" secondItem="71z-E2-68X" secondAttribute="leading" id="imK-zK-dkv"/>
                             <constraint firstItem="71z-E2-68X" firstAttribute="trailing" secondItem="HEl-dj-qBY" secondAttribute="trailing" constant="16" id="kjA-rP-o05"/>
                             <constraint firstItem="6VV-Q0-d6t" firstAttribute="leading" secondItem="kyz-0Z-DYX" secondAttribute="leading" id="m7t-AM-j8C"/>
@@ -403,7 +403,7 @@
                             <constraint firstItem="ync-Ir-aqg" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="sop-DT-xFY"/>
                             <constraint firstItem="98r-We-Wqh" firstAttribute="leading" secondItem="OrK-zx-Ld2" secondAttribute="leading" id="twz-7t-Ie9"/>
                             <constraint firstItem="CRP-6J-AhU" firstAttribute="leading" secondItem="ad1-df-5HU" secondAttribute="leading" id="txN-v5-J8e"/>
-                            <constraint firstItem="5zH-iV-vXV" firstAttribute="centerX" secondItem="Ugq-E7-BBM" secondAttribute="centerX" constant="136" id="uOV-pg-gXm"/>
+                            <constraint firstItem="5zH-iV-vXV" firstAttribute="centerX" secondItem="Ugq-E7-BBM" secondAttribute="centerX" id="uOV-pg-gXm"/>
                             <constraint firstItem="PYo-FW-IqC" firstAttribute="top" secondItem="AH6-li-OOE" secondAttribute="bottom" constant="16" id="vLe-KG-S01"/>
                             <constraint firstItem="SeV-io-hQD" firstAttribute="top" secondItem="4pr-dF-GDu" secondAttribute="bottom" constant="16" id="xmS-p8-J2V"/>
                             <constraint firstItem="8ms-KX-8aE" firstAttribute="leading" secondItem="kyz-0Z-DYX" secondAttribute="trailing" constant="58" id="xtA-V7-d64"/>
@@ -920,7 +920,7 @@
                                     <action selector="saveNameButtonTap:" destination="7fd-y5-FGL" eventType="touchUpInside" id="9rz-8b-Qsd"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roD-0T-ZhB">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Твоё имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roD-0T-ZhB">
                                 <rect key="frame" x="107" y="288" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="79y-Yf-Fqg"/>
@@ -929,7 +929,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdE-Cc-G7S">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="И фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdE-Cc-G7S">
                                 <rect key="frame" x="107" y="354" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="BMT-uj-o31"/>
@@ -1008,7 +1008,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSk-0v-1ff">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Рублей" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSk-0v-1ff">
                                 <rect key="frame" x="167" y="423" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Va2-4y-ifc"/>

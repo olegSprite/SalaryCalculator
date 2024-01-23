@@ -28,6 +28,8 @@ class ChengeNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         self.delegate = savingService
     }
     

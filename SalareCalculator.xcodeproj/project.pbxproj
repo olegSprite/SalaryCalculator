@@ -11,6 +11,7 @@
 		D5479F2D2B5ED9F5007A2D54 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5479F2C2B5ED9F5007A2D54 /* User.swift */; };
 		D5479F2F2B5EE124007A2D54 /* ChengeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5479F2E2B5EE124007A2D54 /* ChengeNameViewController.swift */; };
 		D5479F312B5EE287007A2D54 /* ChengeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5479F302B5EE287007A2D54 /* ChengeRateViewController.swift */; };
+		D5479F332B5FC3F1007A2D54 /* HideKayboardExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5479F322B5FC3F1007A2D54 /* HideKayboardExtention.swift */; };
 		D575664C2B5BB80200ABBDCA /* Tochka_Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */; };
 		D575664D2B5BB80500ABBDCA /* TT_Norms_Tochka_Extended_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */; };
 		D575664E2B5BB80700ABBDCA /* TT_Norms_Tochka_Extended_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */; };
@@ -31,6 +32,7 @@
 		D5479F2C2B5ED9F5007A2D54 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5479F2E2B5EE124007A2D54 /* ChengeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChengeNameViewController.swift; sourceTree = "<group>"; };
 		D5479F302B5EE287007A2D54 /* ChengeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChengeRateViewController.swift; sourceTree = "<group>"; };
+		D5479F322B5FC3F1007A2D54 /* HideKayboardExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKayboardExtention.swift; sourceTree = "<group>"; };
 		D575664F2B5C561D00ABBDCA /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		D57FD1852B59C0E600C710F5 /* SalareCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalareCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57FD1882B59C0E600C710F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D5CB84352B5C76CC000377A2 /* SavingService.swift */,
+				D5479F322B5FC3F1007A2D54 /* HideKayboardExtention.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				D5479F2B2B5EC908007A2D54 /* ProfileViewController.swift in Sources */,
 				D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */,
 				D5479F312B5EE287007A2D54 /* ChengeRateViewController.swift in Sources */,
+				D5479F332B5FC3F1007A2D54 /* HideKayboardExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

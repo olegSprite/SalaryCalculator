@@ -71,6 +71,8 @@ class CounterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         self.delegate = savingService
         
         if let rate = delegate?.returnSaveRate() {
@@ -210,7 +212,5 @@ class CounterViewController: UIViewController {
         
         delegate2?.accept()
         navigationController?.popViewController(animated: true)
-        
-        print("Обновляем контроллер")
     }
 }
