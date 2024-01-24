@@ -14,7 +14,6 @@
 		D5479F332B5FC3F1007A2D54 /* HideKayboardExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5479F322B5FC3F1007A2D54 /* HideKayboardExtention.swift */; };
 		D575664C2B5BB80200ABBDCA /* Tochka_Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */; };
 		D575664D2B5BB80500ABBDCA /* TT_Norms_Tochka_Extended_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */; };
-		D575664E2B5BB80700ABBDCA /* TT_Norms_Tochka_Extended_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */; };
 		D57566502B5C561D00ABBDCA /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575664F2B5C561D00ABBDCA /* PickerView.swift */; };
 		D57FD1892B59C0E600C710F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1882B59C0E600C710F5 /* AppDelegate.swift */; };
 		D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD18A2B59C0E600C710F5 /* SceneDelegate.swift */; };
@@ -25,6 +24,8 @@
 		D57FD1A32B5A678400C710F5 /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A22B5A678400C710F5 /* SalaryModel.swift */; };
 		D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */; };
 		D5CB84362B5C76CC000377A2 /* SavingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB84352B5C76CC000377A2 /* SavingService.swift */; };
+		D5CEBF222B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5CEBF212B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf */; };
+		D5CEBF242B60FF1A00BA65D5 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CEBF232B60FF1900BA65D5 /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +45,11 @@
 		D57FD1962B59C0E800C710F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D57FD1A22B5A678400C710F5 /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 		D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
-		D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = TT_Norms_Tochka_Extended_Regular.otf; path = "../../../../../Downloads/Шрифты/TT Norms Tochka Extended Opentype/TT_Norms_Tochka_Extended_Regular.otf"; sourceTree = "<group>"; };
 		D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT_Norms_Tochka_Extended_Bold.otf; sourceTree = "<group>"; };
 		D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tochka_Script.ttf; sourceTree = "<group>"; };
 		D5CB84352B5C76CC000377A2 /* SavingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingService.swift; sourceTree = "<group>"; };
+		D5CEBF212B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT_Norms_Tochka_Extended_Regular.otf; sourceTree = "<group>"; };
+		D5CEBF232B60FF1900BA65D5 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D575664F2B5C561D00ABBDCA /* PickerView.swift */,
+				D5CEBF232B60FF1900BA65D5 /* TextFieldDelegate.swift */,
 				D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */,
 				D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */,
 				D5479F2A2B5EC908007A2D54 /* ProfileViewController.swift */,
@@ -121,7 +124,7 @@
 			children = (
 				D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */,
 				D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */,
-				D57FD1A82B5ABE9200C710F5 /* TT_Norms_Tochka_Extended_Regular.otf */,
+				D5CEBF212B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -194,11 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */,
+				D5CEBF222B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf in Resources */,
 				D57FD1922B59C0E800C710F5 /* Assets.xcassets in Resources */,
 				D57FD1902B59C0E600C710F5 /* Main.storyboard in Resources */,
 				D575664D2B5BB80500ABBDCA /* TT_Norms_Tochka_Extended_Bold.otf in Resources */,
 				D575664C2B5BB80200ABBDCA /* Tochka_Script.ttf in Resources */,
-				D575664E2B5BB80700ABBDCA /* TT_Norms_Tochka_Extended_Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5CEBF242B60FF1A00BA65D5 /* TextFieldDelegate.swift in Sources */,
 				D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */,
 				D5479F2F2B5EE124007A2D54 /* ChengeNameViewController.swift in Sources */,
 				D57FD18D2B59C0E600C710F5 /* CurentMounthViewController.swift in Sources */,

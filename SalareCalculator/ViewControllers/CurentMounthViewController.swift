@@ -47,9 +47,9 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
         nightHourseMounthLable?.text = (savedSalary?.nightHourseMounth ?? "Ошибка") + " ч."
         nightHourseHalfLable?.text = (savedSalary?.nightHourseHalf ?? "Ошибка") + " ч."
         selebrationHourseLable?.text = (savedSalary?.selebrationHourse ?? "Ошибка") + " ч."
-        allSalaryLable?.text = savedSalary?.allSalary
-        firstHalfSalaryLable?.text = savedSalary?.firstHalfSalary
-        secondHalfSalaryLable?.text = savedSalary?.secondHalfSalary
+        allSalaryLable.text = "+ " + devideNumber(savedSalary?.allSalary) + "₽"
+        firstHalfSalaryLable.text = "+ " + devideNumber(savedSalary?.firstHalfSalary) + "₽"
+        secondHalfSalaryLable.text = "+ " + devideNumber(savedSalary?.secondHalfSalary) + "₽"
         mounthLable?.text = savedSalary?.mounth
         
         switch savedSalary?.mounth {
@@ -88,34 +88,15 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
         }
     }
     
-//    func devideNumper(_ number: String) -> String {
-//        if number.count == 3 {
-//            return number
-//        }
-//        var array: [Character] = []
-//        var numberResult = number
-//        var result: String = ""
-//        var count = (number.count + 2) / 3
-//        
-//        for num in number {
-//            array.append(num)
-//        }
-//        
-//        switch count {
-//        case 2:
-//            var a: Array<Character> = numberResult.removeLast()
-//            var b: String = numberResult
-//            return b + a
-//        case 3:
-//            
-//        default:
-//            <#code#>
-//        }
-//        
-//        for i in array.reversed() {
-//            
-//        }
-//    }
+    func devideNumber(_ number: String?) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+
+        let amount = Int(number ?? "0")
+        let formattedString = formatter.string(for: amount) ?? "0"
+        return formattedString
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "getDataSagay" {
@@ -126,6 +107,5 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
     
     
     @IBAction func profileTap(_ sender: Any) {
-        accept()
     }
 }

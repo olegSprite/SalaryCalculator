@@ -113,6 +113,9 @@ class CounterViewController: UIViewController {
         result += Double(rate) * hoursMounth
         result += Double(rate) * 0.4 * nightHourseMounth
         switch curentMounth {
+        case .none:
+            result += Double(rate) * selebrationHourse
+            result += Double(rate) * 0.4 * selebrationNight
         case .january:
             result += Double(rate) * selebrationHourse
             result += Double(rate) * 0.4 * selebrationNight
@@ -142,6 +145,9 @@ class CounterViewController: UIViewController {
         result += Double(rate) * hoursHalf
         result += Double(rate) * 0.4 * nightHourseHalf
         switch curentMounth {
+        case .none:
+            result += Double(rate) * selebrationHourse
+            result += Double(rate) * 0.4 * selebrationNight
         case .january:
             result += Double(rate) * selebrationHourse
             result += Double(rate) * 0.4 * selebrationNight
@@ -179,16 +185,16 @@ class CounterViewController: UIViewController {
     
     
     
-    private func returnSalaryToScreen() {
-        allSalaryLable.text = "+" + String(calculateAllSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0)) + "₽"
+    func returnSalaryToScreen() {
+        allSalaryLable.text = String(calculateAllSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         allSalaryLable.textColor = .systemGreen
         
-        firstHalfSalaryLable.text = "+" + String(calculateFirstHalfSalary(hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0)) + "₽"
+        firstHalfSalaryLable.text = String(calculateFirstHalfSalary(hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         firstHalfSalaryLable.textColor = .systemGreen
         
-        secondHalfSalaryLable.text = "+" + String(calculateSecondHalfSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0)) + "₽"
+        secondHalfSalaryLable.text = String(calculateSecondHalfSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         secondHalfSalaryLable.textColor = .systemGreen
     }
