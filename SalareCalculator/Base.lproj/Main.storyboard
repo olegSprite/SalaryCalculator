@@ -31,6 +31,15 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-Xq-Plf">
                                 <rect key="frame" x="16" y="92" width="382" height="721"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6gp-Dk-fMu">
+                                    <rect key="frame" x="0.0" y="228" width="382" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Удалить всё"/>
+                                    <connections>
+                                        <action selector="delateButtonTap:" destination="GWe-sb-txb" eventType="touchUpInside" id="sRE-G2-IsS"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="IMx-kw-PAY" customClass="SalaryCellView" customModule="SalareCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="382" height="150"/>
@@ -39,32 +48,81 @@
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Январь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEu-Aq-2x2">
-                                                    <rect key="frame" x="20" y="11" width="342" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Январь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEu-Aq-2x2">
+                                                    <rect key="frame" x="50" y="11" width="70.5" height="22"/>
                                                     <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="24"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всего" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPJ-aI-wr5">
+                                                    <rect key="frame" x="28" y="115" width="56" height="25"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Всего:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPJ-aI-wr5">
-                                                    <rect key="frame" x="20" y="118" width="53" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 000₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-JU-8Re">
-                                                    <rect key="frame" x="81" y="111" width="115" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100 000₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-JU-8Re">
+                                                    <rect key="frame" x="124.5" y="112.5" width="133" height="30"/>
                                                     <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="24"/>
                                                     <color key="textColor" systemColor="systemGreenColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аванс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMl-vc-4Ix">
+                                                    <rect key="frame" x="28" y="61" width="43" height="19"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расчёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtm-hX-eI3">
+                                                    <rect key="frame" x="28" y="88" width="48" height="19"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100 000₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcZ-cs-TJG">
+                                                    <rect key="frame" x="135.5" y="85" width="111" height="25"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="20"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100 000₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6d-7t-0U2">
+                                                    <rect key="frame" x="138.5" y="58.5" width="105" height="24"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="19"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-Dl-rbq">
+                                                    <rect key="frame" x="20" y="11.5" width="22" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="ZaY-2v-1h8"/>
+                                                        <constraint firstAttribute="width" constant="22" id="vS6-8L-jfX"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sam-JU-8Re" firstAttribute="centerX" secondItem="fQU-sx-RpX" secondAttribute="centerX" id="B2U-zf-pyC"/>
+                                                <constraint firstItem="f6d-7t-0U2" firstAttribute="centerX" secondItem="fQU-sx-RpX" secondAttribute="centerX" id="KAG-gJ-w9B"/>
+                                                <constraint firstItem="XcZ-cs-TJG" firstAttribute="centerX" secondItem="fQU-sx-RpX" secondAttribute="centerX" id="KoW-2p-2U7"/>
+                                                <constraint firstItem="jMl-vc-4Ix" firstAttribute="leading" secondItem="fQU-sx-RpX" secondAttribute="leadingMargin" constant="8" id="LAA-g6-Amd"/>
+                                                <constraint firstItem="Xtm-hX-eI3" firstAttribute="top" secondItem="jMl-vc-4Ix" secondAttribute="bottom" constant="8" id="Pyi-tG-zgc"/>
+                                                <constraint firstItem="kSa-Dl-rbq" firstAttribute="top" secondItem="fQU-sx-RpX" secondAttribute="topMargin" id="ShI-H4-XvY"/>
+                                                <constraint firstItem="kSa-Dl-rbq" firstAttribute="leading" secondItem="fQU-sx-RpX" secondAttribute="leadingMargin" id="TdM-ml-Zsi"/>
+                                                <constraint firstItem="lPJ-aI-wr5" firstAttribute="top" secondItem="Xtm-hX-eI3" secondAttribute="bottom" constant="8" id="VaU-eo-ZGO"/>
+                                                <constraint firstItem="lPJ-aI-wr5" firstAttribute="leading" secondItem="fQU-sx-RpX" secondAttribute="leadingMargin" constant="8" id="Wlh-rq-diw"/>
+                                                <constraint firstItem="XcZ-cs-TJG" firstAttribute="centerY" secondItem="Xtm-hX-eI3" secondAttribute="centerY" id="YBU-Ys-hG8"/>
+                                                <constraint firstItem="gEu-Aq-2x2" firstAttribute="leading" secondItem="kSa-Dl-rbq" secondAttribute="trailing" constant="8" id="ZQX-r3-g6Y"/>
+                                                <constraint firstItem="Sam-JU-8Re" firstAttribute="centerY" secondItem="lPJ-aI-wr5" secondAttribute="centerY" id="bNq-tl-zQy"/>
+                                                <constraint firstItem="f6d-7t-0U2" firstAttribute="centerY" secondItem="jMl-vc-4Ix" secondAttribute="centerY" id="eCi-ir-4uN"/>
+                                                <constraint firstItem="jMl-vc-4Ix" firstAttribute="top" secondItem="fQU-sx-RpX" secondAttribute="topMargin" constant="50" id="kGd-xu-ah7"/>
+                                                <constraint firstItem="kSa-Dl-rbq" firstAttribute="centerY" secondItem="gEu-Aq-2x2" secondAttribute="centerY" id="kdR-Za-FyX"/>
+                                                <constraint firstItem="gEu-Aq-2x2" firstAttribute="top" secondItem="fQU-sx-RpX" secondAttribute="topMargin" id="xUB-33-vTY"/>
+                                                <constraint firstItem="Xtm-hX-eI3" firstAttribute="leading" secondItem="fQU-sx-RpX" secondAttribute="leadingMargin" constant="8" id="yA0-gu-PQe"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="allSalaryLable" destination="Sam-JU-8Re" id="y7G-jA-grr"/>
+                                            <outlet property="firstHalfSallaryLable" destination="f6d-7t-0U2" id="ZMI-oa-MCQ"/>
                                             <outlet property="mounthCellLable" destination="gEu-Aq-2x2" id="mFG-qI-fDl"/>
+                                            <outlet property="swcondHalfSallaryLable" destination="XcZ-cs-TJG" id="lXW-7s-eyk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,6 +143,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dPF-v3-8PW"/>
                     <connections>
+                        <outlet property="dalateButton" destination="6gp-Dk-fMu" id="Qnq-fg-iEL"/>
                         <outlet property="tableView" destination="SDl-Xq-Plf" id="h2M-e9-6Ni"/>
                     </connections>
                 </viewController>
@@ -1147,11 +1206,15 @@
         <image name="Dog" width="512" height="512"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
+        <image name="doc.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

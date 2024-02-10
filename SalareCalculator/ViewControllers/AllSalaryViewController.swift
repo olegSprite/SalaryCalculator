@@ -10,12 +10,14 @@ import UIKit
 
 protocol AllSalaryViewControllerDelegate {
     func returnSallaryArray() -> [SalaryModel]
+    func deleteArrayOfSalary()
 }
 
 final class AllSalaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dalateButton: UIButton!
     
     var arrayOfSalary = [SalaryModel]()
     var delegate: SavingService?
@@ -24,11 +26,15 @@ final class AllSalaryViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         
         self.delegate = SavingService()
-        
+        updateView()
+    }
+    
+    func updateView() {
         guard let arrayOfSalary = self.delegate?.returnSallaryArray() else {
             return
         }
         self.arrayOfSalary = arrayOfSalary
+        tableView.reloadData()
     }
     
     // MARK: UITableViewDelegate, UITableViewDataSource
@@ -53,6 +59,20 @@ final class AllSalaryViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO Выбор ячейки
     }
+    
+    
+    @IBAction func delateButtonTap(_ sender: Any) {
+        let alert = UIAlertController(title: "Все данные о зарплатах будут удалены!", message: "Вы уверены?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: { (action) in
+            self.delegate?.deleteArrayOfSalary()
+            self.updateView()
+        }))
+        alert.addAction(UIAlertAction(title: "Нет", style: .default))
+
+        self.present(alert, animated: true, completion: nil)
+    }
 }
+
 
 

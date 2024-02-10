@@ -47,9 +47,9 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
         nightHourseMounthLable?.text = (savedSalary?.nightHourseMounth ?? "Ошибка") + " ч."
         nightHourseHalfLable?.text = (savedSalary?.nightHourseHalf ?? "Ошибка") + " ч."
         selebrationHourseLable?.text = (savedSalary?.selebrationHourse ?? "Ошибка") + " ч."
-        allSalaryLable.text = "+ " + devideNumber(savedSalary?.allSalary) + "₽"
-        firstHalfSalaryLable.text = "+ " + devideNumber(savedSalary?.firstHalfSalary) + "₽"
-        secondHalfSalaryLable.text = "+ " + devideNumber(savedSalary?.secondHalfSalary) + "₽"
+        allSalaryLable.text = savedSalary?.allSalary
+        firstHalfSalaryLable.text = savedSalary?.firstHalfSalary
+        secondHalfSalaryLable.text = savedSalary?.secondHalfSalary
         mounthLable?.text = savedSalary?.mounth
         
         switch savedSalary?.mounth {
@@ -86,16 +86,6 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
         default:
             whenSalSelebrationComeLable?.isHidden = true
         }
-    }
-    
-    func devideNumber(_ number: String?) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.groupingSeparator = " "
-
-        let amount = Int(number ?? "0")
-        let formattedString = formatter.string(for: amount) ?? "0"
-        return formattedString
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

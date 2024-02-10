@@ -85,4 +85,9 @@ class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerD
         } else { return "0" }
     }
     
+    // MARK: - Delete
+    
+    func deleteArrayOfSalary() {
+        defaults.removeObject(forKey: "SaveAllSalary")
+    }
 }
