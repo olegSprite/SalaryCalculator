@@ -197,6 +197,20 @@ class CounterViewController: UIViewController {
         secondHalfSalaryLable.text = String(calculateSecondHalfSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         secondHalfSalaryLable.textColor = .systemGreen
+        
+        allSalaryLable.text = "+ " + devideNumber(allSalaryLable.text) + "₽"
+        firstHalfSalaryLable.text = "+ " + devideNumber(firstHalfSalaryLable.text) + "₽"
+        secondHalfSalaryLable.text = "+ " + devideNumber(secondHalfSalaryLable.text) + "₽"
+    }
+    
+    func devideNumber(_ number: String?) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+
+        let amount = Int(number ?? "0")
+        let formattedString = formatter.string(for: amount) ?? "0"
+        return formattedString
     }
     
     
@@ -218,5 +232,23 @@ class CounterViewController: UIViewController {
         
         delegate2?.accept()
         navigationController?.popViewController(animated: true)
+    }
+}
+
+
+extension CounterViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn rate: NSRange, replacementString string: String) -> Bool {
+        returnSalaryToScreen()
+        return true
+    }
+    
+    internal func textFieldDidEndEditing(_: UITextField) {
+        if hoursMounthTextField.text != "" {
+            hoursMounthTextField.isEnabled = true
+            if hoursMounthTextField.text != "" {
+                nightHourseHalfTextField.isEnabled = true
+            }
+        }
     }
 }

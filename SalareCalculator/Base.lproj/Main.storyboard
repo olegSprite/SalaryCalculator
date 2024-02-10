@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLC-tt-h0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wjJ-Sr-Vkl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -21,59 +21,76 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Доходы-->
+        <!--All Salary View Controller-->
         <scene sceneID="ZIt-1y-ptO">
             <objects>
-                <viewController id="GWe-sb-txb" sceneMemberID="viewController">
+                <viewController id="GWe-sb-txb" customClass="AllSalaryViewController" customModule="SalareCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qzw-8P-Uq0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доходы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edK-0G-nSA">
-                                <rect key="frame" x="16" y="64" width="101" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="rLa-cg-V1i"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страница в разработке" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDu-HZ-3EB">
-                                <rect key="frame" x="108" y="438" width="199.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="wvI-tB-OBW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="97L-iJ-MF9">
-                                <rect key="frame" x="87" y="301.5" width="240" height="128.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="iVs-vi-8hV"/>
-                                    <constraint firstAttribute="width" constant="240" id="kDy-WT-MwT"/>
-                                </constraints>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-Xq-Plf">
+                                <rect key="frame" x="16" y="92" width="382" height="721"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="IMx-kw-PAY" customClass="SalaryCellView" customModule="SalareCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="382" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IMx-kw-PAY" id="fQU-sx-RpX">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Январь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEu-Aq-2x2">
+                                                    <rect key="frame" x="20" y="11" width="342" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TochkaScript-Normal" family="Tochka Script" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Всего:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPJ-aI-wr5">
+                                                    <rect key="frame" x="20" y="118" width="53" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Regular" family="TT Norms Tochka Extended" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 000₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-JU-8Re">
+                                                    <rect key="frame" x="81" y="111" width="115" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TTNormsTochkaExt-Bold" family="TT Norms Tochka Extended" pointSize="24"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="allSalaryLable" destination="Sam-JU-8Re" id="y7G-jA-grr"/>
+                                            <outlet property="mounthCellLable" destination="gEu-Aq-2x2" id="mFG-qI-fDl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GWe-sb-txb" id="EA3-i6-TfX"/>
+                                    <outlet property="delegate" destination="GWe-sb-txb" id="6PL-gg-xcM"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EcL-Kd-5le"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="97L-iJ-MF9" firstAttribute="leading" secondItem="EcL-Kd-5le" secondAttribute="leading" constant="87" id="874-FI-YBI"/>
-                            <constraint firstItem="97L-iJ-MF9" firstAttribute="centerX" secondItem="Qzw-8P-Uq0" secondAttribute="centerX" id="Avj-Lb-DGC"/>
-                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="centerY" secondItem="EcL-Kd-5le" secondAttribute="centerY" constant="18" id="eFB-kz-UA4"/>
-                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="centerX" secondItem="EcL-Kd-5le" secondAttribute="centerX" constant="0.75" id="mpB-GP-9Ek"/>
-                            <constraint firstItem="EcL-Kd-5le" firstAttribute="trailing" secondItem="97L-iJ-MF9" secondAttribute="trailing" constant="87" id="now-PB-kd0"/>
-                            <constraint firstItem="EcL-Kd-5le" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="edK-0G-nSA" secondAttribute="trailing" symbolic="YES" id="qad-G9-JfD"/>
-                            <constraint firstItem="FDu-HZ-3EB" firstAttribute="top" secondItem="97L-iJ-MF9" secondAttribute="bottom" constant="8" symbolic="YES" id="sMG-zn-voH"/>
-                            <constraint firstItem="edK-0G-nSA" firstAttribute="leading" secondItem="EcL-Kd-5le" secondAttribute="leading" constant="16" id="vee-QZ-4n4"/>
-                            <constraint firstItem="edK-0G-nSA" firstAttribute="top" secondItem="EcL-Kd-5le" secondAttribute="top" constant="16" id="y03-hn-fUO"/>
+                            <constraint firstItem="EcL-Kd-5le" firstAttribute="bottom" secondItem="SDl-Xq-Plf" secondAttribute="bottom" id="3zj-HM-X7Q"/>
+                            <constraint firstItem="SDl-Xq-Plf" firstAttribute="top" secondItem="EcL-Kd-5le" secondAttribute="top" id="5Bl-Ye-u6C"/>
+                            <constraint firstItem="EcL-Kd-5le" firstAttribute="trailing" secondItem="SDl-Xq-Plf" secondAttribute="trailing" constant="16" id="5Ne-Qk-rAD"/>
+                            <constraint firstItem="SDl-Xq-Plf" firstAttribute="leading" secondItem="EcL-Kd-5le" secondAttribute="leading" constant="16" id="xAZ-6N-0te"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Доходы" image="books.vertical.fill" catalog="system" id="iS4-kW-Mlu"/>
+                    <navigationItem key="navigationItem" id="dPF-v3-8PW"/>
+                    <connections>
+                        <outlet property="tableView" destination="SDl-Xq-Plf" id="h2M-e9-6Ni"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BpS-DE-SPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="411"/>
+            <point key="canvasLocation" x="159.42028985507247" y="410.49107142857139"/>
         </scene>
         <!--Counter View Controller-->
         <scene sceneID="fFy-zR-RQy">
@@ -759,6 +776,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Текущий месяц" image="book.fill" catalog="system" id="IST-Nd-Lnf"/>
+                    <navigationItem key="navigationItem" id="x9a-LK-C1T"/>
                     <connections>
                         <outlet property="allSalaryLable" destination="nPF-bc-lav" id="iq9-J2-2lf"/>
                         <outlet property="firstHalfSalaryLable" destination="AkM-kt-URT" id="DtT-nu-Ubm"/>
@@ -1085,22 +1103,41 @@
             <point key="canvasLocation" x="832" y="-904"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="PZA-r5-X1p">
+        <scene sceneID="30S-M4-hpm">
             <objects>
-                <tabBarController id="nLC-tt-h0g" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r9h-Qf-Et4">
+                <tabBarController id="wjJ-Sr-Vkl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wn5-J5-4Mz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="EQz-I4-nl4" kind="relationship" relationship="viewControllers" id="g5X-G4-9Zv"/>
-                        <segue destination="GWe-sb-txb" kind="relationship" relationship="viewControllers" id="ImC-2E-Liy"/>
+                        <segue destination="EQz-I4-nl4" kind="relationship" relationship="viewControllers" id="kIU-Pj-q8q"/>
+                        <segue destination="RfD-hQ-Hrw" kind="relationship" relationship="viewControllers" id="GmF-FW-5V8"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AhF-3h-AZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lni-jS-XMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1654" y="62"/>
+            <point key="canvasLocation" x="-1614" y="84"/>
+        </scene>
+        <!--Доходы-->
+        <scene sceneID="of8-oR-dE3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RfD-hQ-Hrw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Доходы" image="books.vertical.fill" catalog="system" id="iS4-kW-Mlu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jl7-iM-2j6">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GWe-sb-txb" kind="relationship" relationship="rootViewController" id="sOw-Lh-CWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OD-S3-ytq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750.72463768115949" y="410.49107142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1110,7 +1147,6 @@
         <image name="Dog" width="512" height="512"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
-        <image name="gearshape.2.fill" catalog="system" width="128" height="101"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1118,7 +1154,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

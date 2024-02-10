@@ -23,9 +23,10 @@
 		D57FD1952B59C0E800C710F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57FD1932B59C0E800C710F5 /* LaunchScreen.storyboard */; };
 		D57FD1A32B5A678400C710F5 /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A22B5A678400C710F5 /* SalaryModel.swift */; };
 		D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */; };
+		D5A6AA6A2B68F22600D18D25 /* AllSalaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A6AA692B68F22600D18D25 /* AllSalaryViewController.swift */; };
+		D5A6AA6C2B68FAE000D18D25 /* SalaryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A6AA6B2B68FAE000D18D25 /* SalaryCellView.swift */; };
 		D5CB84362B5C76CC000377A2 /* SavingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB84352B5C76CC000377A2 /* SavingService.swift */; };
 		D5CEBF222B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5CEBF212B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf */; };
-		D5CEBF242B60FF1A00BA65D5 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CEBF232B60FF1900BA65D5 /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +48,10 @@
 		D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		D57FD1A92B5ABE9400C710F5 /* TT_Norms_Tochka_Extended_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT_Norms_Tochka_Extended_Bold.otf; sourceTree = "<group>"; };
 		D57FD1AA2B5ABEB500C710F5 /* Tochka_Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tochka_Script.ttf; sourceTree = "<group>"; };
+		D5A6AA692B68F22600D18D25 /* AllSalaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSalaryViewController.swift; sourceTree = "<group>"; };
+		D5A6AA6B2B68FAE000D18D25 /* SalaryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCellView.swift; sourceTree = "<group>"; };
 		D5CB84352B5C76CC000377A2 /* SavingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingService.swift; sourceTree = "<group>"; };
 		D5CEBF212B60EE6700BA65D5 /* TT_Norms_Tochka_Extended_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT_Norms_Tochka_Extended_Regular.otf; sourceTree = "<group>"; };
-		D5CEBF232B60FF1900BA65D5 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				D575664F2B5C561D00ABBDCA /* PickerView.swift */,
-				D5CEBF232B60FF1900BA65D5 /* TextFieldDelegate.swift */,
 				D57FD18C2B59C0E600C710F5 /* CurentMounthViewController.swift */,
 				D57FD1A42B5A6F0700C710F5 /* CounterViewController.swift */,
 				D5479F2A2B5EC908007A2D54 /* ProfileViewController.swift */,
 				D5479F2E2B5EE124007A2D54 /* ChengeNameViewController.swift */,
 				D5479F302B5EE287007A2D54 /* ChengeRateViewController.swift */,
+				D5A6AA692B68F22600D18D25 /* AllSalaryViewController.swift */,
+				D5A6AA6B2B68FAE000D18D25 /* SalaryCellView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -212,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5CEBF242B60FF1A00BA65D5 /* TextFieldDelegate.swift in Sources */,
 				D57FD1A52B5A6F0700C710F5 /* CounterViewController.swift in Sources */,
 				D5479F2F2B5EE124007A2D54 /* ChengeNameViewController.swift in Sources */,
 				D57FD18D2B59C0E600C710F5 /* CurentMounthViewController.swift in Sources */,
@@ -223,8 +225,10 @@
 				D5CB84362B5C76CC000377A2 /* SavingService.swift in Sources */,
 				D5479F2B2B5EC908007A2D54 /* ProfileViewController.swift in Sources */,
 				D57FD18B2B59C0E600C710F5 /* SceneDelegate.swift in Sources */,
+				D5A6AA6C2B68FAE000D18D25 /* SalaryCellView.swift in Sources */,
 				D5479F312B5EE287007A2D54 /* ChengeRateViewController.swift in Sources */,
 				D5479F332B5FC3F1007A2D54 /* HideKayboardExtention.swift in Sources */,
+				D5A6AA6A2B68F22600D18D25 /* AllSalaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
