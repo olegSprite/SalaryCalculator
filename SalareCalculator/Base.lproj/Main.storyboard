@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--All Salary View Controller-->
+        <!--Доходы-->
         <scene sceneID="ZIt-1y-ptO">
             <objects>
                 <viewController id="GWe-sb-txb" customClass="AllSalaryViewController" customModule="SalareCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,6 +34,7 @@
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6gp-Dk-fMu">
                                     <rect key="frame" x="0.0" y="228" width="382" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" systemColor="systemRedColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Удалить всё"/>
                                     <connections>
@@ -123,6 +124,7 @@
                                             <outlet property="firstHalfSallaryLable" destination="f6d-7t-0U2" id="ZMI-oa-MCQ"/>
                                             <outlet property="mounthCellLable" destination="gEu-Aq-2x2" id="mFG-qI-fDl"/>
                                             <outlet property="swcondHalfSallaryLable" destination="XcZ-cs-TJG" id="lXW-7s-eyk"/>
+                                            <segue destination="VG9-ML-wmm" kind="presentation" trigger="accessoryAction" id="Q6j-ce-FpH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -141,7 +143,7 @@
                             <constraint firstItem="SDl-Xq-Plf" firstAttribute="leading" secondItem="EcL-Kd-5le" secondAttribute="leading" constant="16" id="xAZ-6N-0te"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dPF-v3-8PW"/>
+                    <navigationItem key="navigationItem" title="Доходы" largeTitleDisplayMode="always" id="dPF-v3-8PW"/>
                     <connections>
                         <outlet property="dalateButton" destination="6gp-Dk-fMu" id="Qnq-fg-iEL"/>
                         <outlet property="tableView" destination="SDl-Xq-Plf" id="h2M-e9-6Ni"/>
@@ -150,6 +152,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BpS-DE-SPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159.42028985507247" y="410.49107142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GPg-zn-SLn">
+            <objects>
+                <viewController id="VG9-ML-wmm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DSB-Hm-96A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7ij-DS-oMP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKe-at-SQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="410"/>
         </scene>
         <!--Counter View Controller-->
         <scene sceneID="fFy-zR-RQy">
@@ -554,7 +571,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Профиль"/>
                                 <connections>
                                     <action selector="profileTap:" destination="EQz-I4-nl4" eventType="touchUpInside" id="bgm-qS-HVc"/>
-                                    <segue destination="9fP-iW-X5q" kind="show" id="IRC-32-q2e"/>
+                                    <segue destination="9fP-iW-X5q" kind="presentation" id="IRC-32-q2e"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="За" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-lc-IiY">
@@ -1185,9 +1202,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RfD-hQ-Hrw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Доходы" image="books.vertical.fill" catalog="system" id="iS4-kW-Mlu"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jl7-iM-2j6">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jl7-iM-2j6">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1218,6 +1236,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

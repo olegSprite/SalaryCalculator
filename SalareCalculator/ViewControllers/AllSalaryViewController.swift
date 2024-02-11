@@ -29,6 +29,11 @@ final class AllSalaryViewController: UIViewController, UITableViewDelegate, UITa
         updateView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateView()
+    }
+    
     func updateView() {
         guard let arrayOfSalary = self.delegate?.returnSallaryArray() else {
             return

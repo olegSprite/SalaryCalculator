@@ -227,7 +227,6 @@ class CounterViewController: UIViewController {
         let salaryModel = SalaryModel(hoursMounth: hoursMounthTextField.text ?? "Ошибка", hoursHalf: hoursHalfTextField.text ?? "Ошибка", nightHourseMounth: nightHourseMounthTextField.text ?? "Ошибка", nightHourseHalf: nightHourseHalfTextField.text ?? "Ошибка", selebrationHourse: selebrationHourseTextField.text ?? "Ошибка", nightSelebrationHourse: selebrationNightTextField.text ?? "Ошибка", allSalary: allSalaryLable.text ?? "Ошибка", firstHalfSalary: firstHalfSalaryLable.text ?? "Ошибка", secondHalfSalary: secondHalfSalaryLable.text ?? "Ошибка", mounth: curentMounth.rawValue)
         
         delegate?.savingSalary(salaryModel: salaryModel)
-        tableView.updateView()
     
         self.dismiss(animated: true, completion: nil)
         
