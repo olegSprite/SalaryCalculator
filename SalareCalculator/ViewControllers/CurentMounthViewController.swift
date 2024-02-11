@@ -47,9 +47,9 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
         nightHourseMounthLable?.text = (savedSalary?.nightHourseMounth ?? "Ошибка") + " ч."
         nightHourseHalfLable?.text = (savedSalary?.nightHourseHalf ?? "Ошибка") + " ч."
         selebrationHourseLable?.text = (savedSalary?.selebrationHourse ?? "Ошибка") + " ч."
-        allSalaryLable?.text = savedSalary?.allSalary
-        firstHalfSalaryLable?.text = savedSalary?.firstHalfSalary
-        secondHalfSalaryLable?.text = savedSalary?.secondHalfSalary
+        allSalaryLable.text = savedSalary?.allSalary
+        firstHalfSalaryLable.text = savedSalary?.firstHalfSalary
+        secondHalfSalaryLable.text = savedSalary?.secondHalfSalary
         mounthLable?.text = savedSalary?.mounth
         
         switch savedSalary?.mounth {
@@ -97,6 +97,5 @@ class CurentMounthViewController: UIViewController, CounterViewControllerDelegat
     
     
     @IBAction func profileTap(_ sender: Any) {
-        accept()
     }
 }

@@ -65,11 +65,14 @@ class CounterViewController: UIViewController {
     var delegate: CounterViewControllerDelegate?
     var delegate2: CounterViewControllerDelegate2?
     let savingService = SavingService()
+    let tableView = AllSalaryViewController()
     
     //MARK: - Life Sircle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
         
         self.delegate = savingService
         
@@ -111,6 +114,9 @@ class CounterViewController: UIViewController {
         result += Double(rate) * hoursMounth
         result += Double(rate) * 0.4 * nightHourseMounth
         switch curentMounth {
+        case .none:
+            result += Double(rate) * selebrationHourse
+            result += Double(rate) * 0.4 * selebrationNight
         case .january:
             result += Double(rate) * selebrationHourse
             result += Double(rate) * 0.4 * selebrationNight
@@ -140,6 +146,9 @@ class CounterViewController: UIViewController {
         result += Double(rate) * hoursHalf
         result += Double(rate) * 0.4 * nightHourseHalf
         switch curentMounth {
+        case .none:
+            result += Double(rate) * selebrationHourse
+            result += Double(rate) * 0.4 * selebrationNight
         case .january:
             result += Double(rate) * selebrationHourse
             result += Double(rate) * 0.4 * selebrationNight
@@ -177,18 +186,32 @@ class CounterViewController: UIViewController {
     
     
     
-    private func returnSalaryToScreen() {
-        allSalaryLable.text = "+" + String(calculateAllSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0)) + "₽"
+    func returnSalaryToScreen() {
+        allSalaryLable.text = String(calculateAllSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         allSalaryLable.textColor = .systemGreen
         
-        firstHalfSalaryLable.text = "+" + String(calculateFirstHalfSalary(hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0)) + "₽"
+        firstHalfSalaryLable.text = String(calculateFirstHalfSalary(hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         firstHalfSalaryLable.textColor = .systemGreen
         
-        secondHalfSalaryLable.text = "+" + String(calculateSecondHalfSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0)) + "₽"
+        secondHalfSalaryLable.text = String(calculateSecondHalfSalary(hoursMounth: Double(self.hoursMounthTextField.text!) ?? 0, nightHourseMounth: Double(self.nightHourseMounthTextField.text!) ?? 0, hoursHalf: Double(self.hoursHalfTextField.text!) ?? 0, nightHourseHalf: Double(self.nightHourseHalfTextField.text!) ?? 0, selebrationHourse: Double(self.selebrationHourseTextField.text!) ?? 0, selebrationNight: Double(self.selebrationNightTextField.text!) ?? 0))
         
         secondHalfSalaryLable.textColor = .systemGreen
+        
+        allSalaryLable.text = "+ " + devideNumber(allSalaryLable.text) + "₽"
+        firstHalfSalaryLable.text = "+ " + devideNumber(firstHalfSalaryLable.text) + "₽"
+        secondHalfSalaryLable.text = "+ " + devideNumber(secondHalfSalaryLable.text) + "₽"
+    }
+    
+    func devideNumber(_ number: String?) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+
+        let amount = Int(number ?? "0")
+        let formattedString = formatter.string(for: amount) ?? "0"
+        return formattedString
     }
     
     
@@ -200,7 +223,6 @@ class CounterViewController: UIViewController {
     }
     
     @IBAction func saveButtonTap(_ sender: Any) {
-        returnSalaryToScreen()
         
         let salaryModel = SalaryModel(hoursMounth: hoursMounthTextField.text ?? "Ошибка", hoursHalf: hoursHalfTextField.text ?? "Ошибка", nightHourseMounth: nightHourseMounthTextField.text ?? "Ошибка", nightHourseHalf: nightHourseHalfTextField.text ?? "Ошибка", selebrationHourse: selebrationHourseTextField.text ?? "Ошибка", nightSelebrationHourse: selebrationNightTextField.text ?? "Ошибка", allSalary: allSalaryLable.text ?? "Ошибка", firstHalfSalary: firstHalfSalaryLable.text ?? "Ошибка", secondHalfSalary: secondHalfSalaryLable.text ?? "Ошибка", mounth: curentMounth.rawValue)
         
@@ -210,7 +232,23 @@ class CounterViewController: UIViewController {
         
         delegate2?.accept()
         navigationController?.popViewController(animated: true)
-        
-        print("Обновляем контроллер")
+    }
+}
+
+
+extension CounterViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn rate: NSRange, replacementString string: String) -> Bool {
+        returnSalaryToScreen()
+        return true
+    }
+    
+    internal func textFieldDidEndEditing(_: UITextField) {
+        if hoursMounthTextField.text != "" {
+            hoursMounthTextField.isEnabled = true
+            if hoursMounthTextField.text != "" {
+                nightHourseHalfTextField.isEnabled = true
+            }
+        }
     }
 }

@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
-class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerDelegate, ProfileViewControllerDelegate, ChengeNameViewControllerDelegate, ChengeRateViewControllerDelegate {
-    
+class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerDelegate, ProfileViewControllerDelegate, ChengeNameViewControllerDelegate, ChengeRateViewControllerDelegate, AllSalaryViewControllerDelegate {
     
     
     let defaults = UserDefaults.standard
-    
-    // MARK: - Functions
+        
+    // MARK: - Saving
     
     func savingSalary(salaryModel: SalaryModel) {
         
@@ -22,6 +21,15 @@ class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerD
         if let encodedSalaryModel = try? encoder.encode(salaryModel) {
             defaults.set(encodedSalaryModel, forKey: "SaveSalary")
         }
+        
+        var allSalaryArray = returnSallaryArray()
+        allSalaryArray.append(salaryModel)
+        
+        if let encodedAllSalaryArray = try? encoder.encode(allSalaryArray) {
+            defaults.set(encodedAllSalaryArray, forKey: "SaveAllSalary")
+        }
+        
+        
     }
     
     func saveName(user: User) {
@@ -35,6 +43,9 @@ class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerD
         defaults.set(rate, forKey: "SaveRate")
     }
     
+    // MARK: - Return
+
+    
     func returnSaveSalary() -> SalaryModel {
         if let savingSalary = UserDefaults.standard.object(forKey: "SaveSalary") as? Data {
             let decoder = JSONDecoder()
@@ -44,6 +55,17 @@ class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerD
         }
         let savingSalary = SalaryModel()
         return savingSalary
+    }
+    
+    func returnSallaryArray() -> [SalaryModel] {
+        if let savingSallaryArray = UserDefaults.standard.object(forKey: "SaveAllSalary") as? Data {
+            let decoder = JSONDecoder()
+            if let savedSallaryArray = try? decoder.decode([SalaryModel].self, from: savingSallaryArray) {
+                return savedSallaryArray
+            }
+        }
+        let savedSallaryArray = [SalaryModel]()
+        return savedSallaryArray
     }
     
     func returnSaveName() -> User {
@@ -63,4 +85,9 @@ class SavingService: CounterViewControllerDelegate, CurentMounthViewContriollerD
         } else { return "0" }
     }
     
+    // MARK: - Delete
+    
+    func deleteArrayOfSalary() {
+        defaults.removeObject(forKey: "SaveAllSalary")
+    }
 }
